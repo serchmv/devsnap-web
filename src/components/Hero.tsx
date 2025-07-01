@@ -43,10 +43,10 @@ const Hero: React.FC<HeroProps> = ({ content }) => {
         </div>
         
         <div className="max-w-4xl mx-auto fade-in-up stagger-1">
-          <h1 className="text-base md:text-lg lg:text-2xl font-light text-white mb-4 leading-relaxed tracking-wide">
-            Soluciones integrales para impulsar tu 
+          <h1 className="text-base md:text-lg lg:text-2xl font-light text-white mb-4 leading-relaxed tracking-wide font-encode-sans">
+            "Soluciones integrales para impulsar tu 
             <p>
-            <span className="font-semibold"> transformación digital</span>
+            <span className="font-semibold"> transformación digital"</span>
 
             </p>
           </h1>

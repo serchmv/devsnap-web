@@ -8,7 +8,8 @@
       "accent": "#E91E63",
       "success": "#20B2AA",
       "white": "#FFFFFF",
-      "gray": "#F8F9FA"
+      "gray": "#F8F9FA",
+      "black": "#000000"
     }
   },
   "navigation": {
@@ -31,7 +32,7 @@
     "title": "Nuestro ADN como Solutions Makers",
     "image": "/images/dna-professional.jpg",
     "features": [
-      "APIificación",
+      
       "Transformación de legacies",
       "IA y analítica",
       "BPA",
@@ -49,7 +50,7 @@
         "image": "/images/server-room.jpg",
         "icon": "💻",
         "services": [
-          "APIificación",
+        
           "Transformación de legacies",
           "IA y analítica",
           "BPA",

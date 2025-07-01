@@ -36,16 +36,16 @@ const Header: React.FC<HeaderProps> = ({ content }) => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden md:flex items-center space-x-6 font-encode-sans">
             {/* Menu Items - Sin ENG */}
-            <div className="flex items-center space-x-6">
+            <div className="flex items-center space-x-6 font-encode-sans">
               {content.navigation.main
                 .filter((item: any) => item.label !== 'ENG')
                 .map((item: any, index: number) => (
                 <a
   key={index}
   href={item.href}
-  className={`font-medium transition-colors duration-300 hover:text-devsnap-secondary ${
+  className={`font-medium font-encode-sans transition-colors duration-300 hover:text-devsnap-secondary ${
     isScrolled ? 'text-black' : 'text-white'
   }`}
 >
