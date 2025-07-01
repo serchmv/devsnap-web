@@ -1,0 +1,280 @@
+{
+  "branding": {
+    "logo": "BLAUTECH",
+    "tagline": "SIMPLIFYING TECH",
+    "colors": {
+      "primary": "#2C3E50",
+      "secondary": "#6C63FF", 
+      "accent": "#E91E63",
+      "success": "#20B2AA",
+      "white": "#FFFFFF",
+      "gray": "#F8F9FA"
+    }
+  },
+  "navigation": {
+    "main": [
+      { "label": "INICIO", "href": "#inicio" },
+      { "label": "CONTÁCTANOS", "href": "#contacto" },
+      { "label": "CARRERAS", "href": "#carreras" },
+      { "label": "ENG", "href": "#" }
+    ],
+    "contact": {
+      "whatsapp": "+52 55 1234 5678",
+      "phone": "+52 55 8765 4321"
+    }
+  },
+  "hero": {
+    "title": "SIMPLIFICAMOS LA ADOPCIÓN DE LA TECNOLOGÍA CREANDO SOLUCIONES EMPRESARIALES ÁGILES.",
+    "backgroundImage": "/images/hero-cityscape.jpg"
+  },
+  "dna": {
+    "title": "Nuestro ADN como Solutions Makers",
+    "image": "/images/dna-professional.jpg",
+    "features": [
+      "APIificación",
+      "Transformación de legacies",
+      "IA y analítica",
+      "BPA",
+      "Omnicanalidad"
+    ]
+  },
+  "services": {
+    "title": "¿Cómo podemos transformar tu compañía?",
+    "subtitle": "TRANSFORMACIÓN DE NEGOCIOS",
+    "description": "Crea soluciones empresariales ágiles centradas en tus clientes.",
+    "categories": [
+      {
+        "title": "Transformación Digital",
+        "description": "Implementa servicios y soluciones tecnológicas enfocadas en las necesidades del mercado y de tus clientes.",
+        "image": "/images/server-room.jpg",
+        "icon": "💻",
+        "services": [
+          "APIificación",
+          "Transformación de legacies",
+          "IA y analítica",
+          "BPA",
+          "Omnicanalidad"
+        ]
+      },
+      {
+        "title": "Servicios Digitales",
+        "description": "Responde, mide y mejora las interacciones con tus clientes para deleitarlos.",
+        "image": "/images/person-tablet.jpg",
+        "icon": "📱",
+        "services": [
+          "CMS",
+          "Eventos CX",
+          "Streaming",
+          "UX/UI",
+          "Content marketing"
+        ],
+        "detailedServices": {
+          "title": "Especialidades Tecnológicas",
+          "subtitle": "Soluciones integrales para impulsar tu transformación digital",
+          "description": "Nuestro equipo de expertos desarrolla e implementa tecnologías de vanguardia adaptadas a las necesidades específicas de tu industria.",
+          "services": [
+            {
+              "name": "Inteligencia Artificial & Machine Learning",
+              "icon": "🤖",
+              "description": "Implementamos soluciones de IA para automatizar procesos, analizar datos y mejorar la toma de decisiones empresariales.",
+              "examples": [
+                "Chatbots inteligentes 24/7",
+                "Análisis predictivo de ventas",
+                "Reconocimiento de imágenes",
+                "Procesamiento de lenguaje natural"
+              ],
+              "color": "from-purple-500 to-indigo-600",
+              "url": "#ia-machine-learning"
+            },
+            {
+              "name": "Automatización de Procesos (RPA)",
+              "icon": "⚙️",
+              "description": "Optimizamos operaciones mediante robots de software que ejecutan tareas repetitivas con precisión y velocidad.",
+              "examples": [
+                "Automatización de facturación",
+                "Procesamiento de documentos",
+                "Gestión de inventarios",
+                "Workflows de aprobación"
+              ],
+              "color": "from-blue-500 to-cyan-600",
+              "url": "#automatizacion-rpa"
+            },
+            {
+              "name": "Migración a la Nube",
+              "icon": "☁️",
+              "description": "Transferimos tu infraestructura y aplicaciones a plataformas cloud seguras, escalables y rentables.",
+              "examples": [
+                "AWS & Azure Migration",
+                "Arquitectura serverless",
+                "Backup y recuperación",
+                "Optimización de costos"
+              ],
+              "color": "from-cyan-500 to-blue-600",
+              "url": "#cloud-migration"
+            },
+            {
+              "name": "Content Marketing & SEO",
+              "icon": "📈",
+              "description": "Desarrollamos estrategias de contenido digital que aumentan tu visibilidad online y generan leads calificados.",
+              "examples": [
+                "Estrategia de contenidos",
+                "SEO técnico y semántico",
+                "Marketing automation",
+                "Analítica digital avanzada"
+              ],
+              "color": "from-green-500 to-emerald-600",
+              "url": "#content-marketing"
+            },
+            {
+              "name": "Desarrollo de APIs & Microservicios",
+              "icon": "🔗",
+              "description": "Creamos arquitecturas modulares que conectan sistemas y permiten escalabilidad empresarial.",
+              "examples": [
+                "APIs RESTful y GraphQL",
+                "Integración de terceros",
+                "Arquitectura de microservicios",
+                "Gateway de APIs"
+              ],
+              "color": "from-orange-500 to-red-600",
+              "url": "#apis-microservicios"
+            },
+            {
+              "name": "Ciberseguridad & DevSecOps",
+              "icon": "🛡️",
+              "description": "Protegemos tu infraestructura digital con protocolos de seguridad avanzados y monitoreo continuo.",
+              "examples": [
+                "Auditorías de seguridad",
+                "Implementación ZERO TRUST",
+                "Monitoreo 24/7",
+                "Compliance GDPR/SOX"
+              ],
+              "color": "from-red-500 to-pink-600",
+              "url": "#ciberseguridad"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "modernization": {
+    "title": "MODERNIZACIÓN TI",
+    "categories": [
+      {
+        "title": "Innovación",
+        "services": [
+          "DevSecOps",
+          "Microservicios",
+          "Multi-cloud",
+          "Optimización"
+        ]
+      },
+      {
+        "title": "Business As Usual",
+        "services": [
+          "Servicios cloud",
+          "Autonomous operations",
+          "Soporte",
+          "Infraestructura"
+        ]
+      }
+    ],
+    "image": "/images/cloud-computing.jpg"
+  },
+  "aboutUs": {
+    "title": "¿Quiénes somos?",
+    "stats": [
+      {
+        "number": "+95%",
+        "description": "de nuestros ingresos provienen de las TOP 500 grandes empresas de Latinoamérica",
+        "icon": "💼",
+        "color": "#E91E63"
+      },
+      {
+        "number": "+185",
+        "description": "Solution Makers",
+        "icon": "👥",
+        "color": "#6C63FF"
+      },
+      {
+        "number": "+100",
+        "description": "proyectos en el último año",
+        "icon": "📊",
+        "color": "#20B2AA"
+      },
+      {
+        "number": "+15",
+        "description": "países de América",
+        "icon": "🌎",
+        "color": "#FF9500"
+      }
+    ]
+  },
+  "differentiators": {
+    "title": "¿Qué nos hace diferentes?",
+    "image": "/images/businesswoman-laptop.jpg",
+    "features": [
+      {
+        "title": "AGILIDAD",
+        "description": "Nos adaptamos rápidamente a los cambios en nuestro entorno tecnológico y aceleramos la transformación digital de nuestros clientes.",
+        "color": "#6C63FF"
+      },
+      {
+        "title": "INNOVACIÓN", 
+        "description": "Somos expertos en la modernización TI, lanzando productos digitales innovadores que mejoran las experiencias de nuestros clientes y de sus clientes.",
+        "color": "#20B2AA"
+      },
+      {
+        "title": "RENTABILIDAD",
+        "description": "Nuestras soluciones de negocio mejoran el crecimiento, la rentabilidad y el margen de ingresos de nuestros clientes mediante la automatización de sus operaciones.",
+        "color": "#E91E63"
+      }
+    ]
+  },
+  "clients": {
+    "title": "Algunos de los clientes con los que trabajamos",
+    "logos": [
+      "Telefónica", "AT&T", "Tigo", "Cable Onda", 
+      "Liverpool", "BI Banco Industrial", "Prored", 
+      "Grupo Ángel", "RiPiC", "Inetum", "Millicon", "Megacable"
+    ]
+  },
+  "joinUs": {
+    "title": "¿Te gustaría convertirte en un Solution Maker?",
+    "description": "Únete al equipo",
+    "image": "/images/team-women.jpg",
+    "cta": "Aplica aquí"
+  },
+  "techCenters": {
+    "title": "Tech-Centers",
+    "locations": [
+      {
+        "name": "México",
+        "video": "/videos/mexico-office.mp4"
+      },
+      {
+        "name": "Guatemala", 
+        "video": "/videos/guatemala-office.mp4"
+      }
+    ]
+  },
+  "newsletter": {
+    "title": "Suscríbete a nuestro boletín de noticias",
+    "placeholder": "Introduce tu email",
+    "button": "SUSCRIBIRSE"
+  },
+  "footer": {
+    "links": [
+      { "label": "Políticas de Privacidad", "href": "#" },
+      { "label": "Contáctanos", "href": "#contacto" },
+      { "label": "Carreras", "href": "#carreras" }
+    ],
+    "socialMedia": [
+      { "platform": "Facebook", "url": "#" },
+      { "platform": "LinkedIn", "url": "#" },
+      { "platform": "YouTube", "url": "#" },
+      { "platform": "Spotify", "url": "#" },
+      { "platform": "Instagram", "url": "#" },
+      { "platform": "TikTok", "url": "#" }
+    ]
+  }
+}
