@@ -29,7 +29,7 @@ function App() {
   useEffect(() => {
     const loadContent = async () => {
       try {
-        const response = await fetch('/data/blautech-content.json');
+        const response = await fetch('/data/devsnap-content.json');
         const data = await response.json();
         setContent(data);
       } catch (error) {
@@ -74,16 +74,16 @@ function App() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-blautech-primary flex items-center justify-center">
+      <div className="min-h-screen bg-devsnap-primary flex items-center justify-center">
         <div className="text-center">
           <div className="w-16 h-16 bg-white rounded-full mx-auto mb-4 flex items-center justify-center animate-pulse">
-            <div className="w-12 h-12 bg-blautech-secondary rounded-full flex items-center justify-center">
+            <div className="w-12 h-12 bg-devsnap-secondary rounded-full flex items-center justify-center">
               <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                <div className="w-4 h-4 bg-blautech-secondary rounded-full"></div>
+                <div className="w-4 h-4 bg-devsnap-secondary rounded-full"></div>
               </div>
             </div>
           </div>
-          <h2 className="text-2xl font-bold text-white mb-2">BLAUTECH</h2>
+          <h2 className="text-2xl font-bold text-white mb-2">DEVSNAP</h2>
           <p className="text-white/70">Cargando experiencia digital...</p>
         </div>
       </div>

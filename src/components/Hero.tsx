@@ -19,7 +19,7 @@ const Hero: React.FC<HeroProps> = ({ content }) => {
       />
       
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 z-10 blautech-hero-gradient" />
+      <div className="absolute inset-0 z-10 devsnap-hero-gradient" />
       
       {/* Technology Network Overlay */}
       <div className="absolute inset-0 z-20 tech-network-overlay" />
@@ -27,10 +27,10 @@ const Hero: React.FC<HeroProps> = ({ content }) => {
       
       {/* Floating Tech Icons */}
       <div className="absolute inset-0 z-20 pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-8 h-8 bg-blautech-secondary rounded-full opacity-20 animate-bounce" style={{ animationDelay: '0s' }} />
-        <div className="absolute top-1/3 right-1/4 w-6 h-6 bg-blautech-success rounded-full opacity-30 animate-bounce" style={{ animationDelay: '2s' }} />
-        <div className="absolute bottom-1/3 left-1/3 w-10 h-10 bg-blautech-accent rounded-full opacity-25 animate-bounce" style={{ animationDelay: '4s' }} />
-        <div className="absolute bottom-1/4 right-1/3 w-7 h-7 bg-blautech-orange rounded-full opacity-20 animate-bounce" style={{ animationDelay: '1s' }} />
+        <div className="absolute top-1/4 left-1/4 w-8 h-8 bg-devsnap-secondary rounded-full opacity-20 animate-bounce" style={{ animationDelay: '0s' }} />
+        <div className="absolute top-1/3 right-1/4 w-6 h-6 bg-devsnap-success rounded-full opacity-30 animate-bounce" style={{ animationDelay: '2s' }} />
+        <div className="absolute bottom-1/3 left-1/3 w-10 h-10 bg-devsnap-accent rounded-full opacity-25 animate-bounce" style={{ animationDelay: '4s' }} />
+        <div className="absolute bottom-1/4 right-1/3 w-7 h-7 bg-devsnap-orange rounded-full opacity-20 animate-bounce" style={{ animationDelay: '1s' }} />
         
         {/* Tech Icons */}
         <div className="absolute top-1/5 right-1/5 text-white opacity-30 text-2xl animate-pulse">💻</div>
@@ -40,18 +40,18 @@ const Hero: React.FC<HeroProps> = ({ content }) => {
       </div>
       
       {/* Content */}
-      <div className="relative z-30 blautech-container text-center px-4">
+      <div className="relative z-30 devsnap-container text-center px-4">
         {/* Logo */}
         <div className="flex items-center justify-center space-x-4 mb-8 fade-in-up">
           <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg">
-            <div className="w-12 h-12 bg-blautech-secondary rounded-full flex items-center justify-center">
+            <div className="w-12 h-12 bg-devsnap-secondary rounded-full flex items-center justify-center">
               <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                <div className="w-4 h-4 bg-blautech-secondary rounded-full"></div>
+                <div className="w-4 h-4 bg-devsnap-secondary rounded-full"></div>
               </div>
             </div>
           </div>
           <div className="flex flex-col text-left">
-            <span className="text-3xl font-bold text-white">BLAUTECH</span>
+            <span className="text-3xl font-bold text-white">DEVSNAP</span>
             <span className="text-sm font-light text-gray-300">SIMPLIFYING TECH</span>
           </div>
         </div>
@@ -65,7 +65,7 @@ const Hero: React.FC<HeroProps> = ({ content }) => {
         <div className="fade-in-up stagger-2">
           <a 
             href="#contacto" 
-            className="blautech-btn-primary inline-block"
+            className="devsnap-btn-primary inline-block"
           >
             CONTÁCTANOS
           </a>

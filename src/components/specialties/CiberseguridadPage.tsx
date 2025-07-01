@@ -6,14 +6,14 @@ interface CiberseguridadPageProps {
 
 const CiberseguridadPage: React.FC<CiberseguridadPageProps> = ({ content }) => {
   return (
-    <section id="ciberseguridad" className="blautech-section bg-gradient-to-br from-red-50 via-white to-pink-50">
-      <div className="blautech-container">
+    <section id="ciberseguridad" className="devsnap-section bg-gradient-to-br from-red-50 via-white to-pink-50">
+      <div className="devsnap-container">
         {/* Header */}
         <div className="text-center mb-16 fade-in-up">
           <div className="inline-block p-4 bg-gradient-to-r from-red-500 to-pink-600 rounded-2xl mb-6">
             <span className="text-4xl text-white">🛡️</span>
           </div>
-          <h1 className="blautech-title text-blautech-primary mb-4">
+          <h1 className="devsnap-title text-devsnap-primary mb-4">
             Ciberseguridad & DevSecOps
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -25,7 +25,7 @@ const CiberseguridadPage: React.FC<CiberseguridadPageProps> = ({ content }) => {
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
           {/* Left Column - Services */}
           <div className="fade-in-up stagger-1">
-            <h2 className="text-2xl font-bold text-blautech-primary mb-8">
+            <h2 className="text-2xl font-bold text-devsnap-primary mb-8">
               Servicios de Ciberseguridad
             </h2>
             
@@ -48,7 +48,7 @@ const CiberseguridadPage: React.FC<CiberseguridadPageProps> = ({ content }) => {
                 }
               ].map((service, index) => (
                 <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-red-100">
-                  <h3 className="text-lg font-bold text-blautech-primary mb-3">{service.title}</h3>
+                  <h3 className="text-lg font-bold text-devsnap-primary mb-3">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {service.features.map((feature, featureIndex) => (
@@ -64,7 +64,7 @@ const CiberseguridadPage: React.FC<CiberseguridadPageProps> = ({ content }) => {
 
           {/* Right Column - DevSecOps */}
           <div className="fade-in-up stagger-2">
-            <h2 className="text-2xl font-bold text-blautech-primary mb-8">
+            <h2 className="text-2xl font-bold text-devsnap-primary mb-8">
               DevSecOps Integration
             </h2>
             
@@ -86,7 +86,7 @@ const CiberseguridadPage: React.FC<CiberseguridadPageProps> = ({ content }) => {
 
             {/* Security Tools */}
             <div className="bg-white rounded-xl p-6 shadow-lg border border-red-100">
-              <h3 className="text-lg font-bold text-blautech-primary mb-4">Herramientas de Seguridad</h3>
+              <h3 className="text-lg font-bold text-devsnap-primary mb-4">Herramientas de Seguridad</h3>
               <div className="space-y-4">
                 <div>
                   <h4 className="font-semibold text-red-600 mb-2">SIEM & Monitoring:</h4>
@@ -125,7 +125,7 @@ const CiberseguridadPage: React.FC<CiberseguridadPageProps> = ({ content }) => {
 
         {/* Security Framework */}
         <div className="fade-in-up stagger-3">
-          <h2 className="text-2xl font-bold text-blautech-primary text-center mb-12">
+          <h2 className="text-2xl font-bold text-devsnap-primary text-center mb-12">
             Framework de Seguridad Integral
           </h2>
           
@@ -142,7 +142,7 @@ const CiberseguridadPage: React.FC<CiberseguridadPageProps> = ({ content }) => {
                   {phase.phase}
                 </div>
                 <div className="text-2xl mb-2">{phase.icon}</div>
-                <h3 className="text-lg font-bold text-blautech-primary mb-2">{phase.title}</h3>
+                <h3 className="text-lg font-bold text-devsnap-primary mb-2">{phase.title}</h3>
                 <p className="text-gray-600 text-sm">{phase.description}</p>
               </div>
             ))}
@@ -151,7 +151,7 @@ const CiberseguridadPage: React.FC<CiberseguridadPageProps> = ({ content }) => {
 
         {/* Compliance & Standards */}
         <div className="fade-in-up stagger-4">
-          <h2 className="text-2xl font-bold text-blautech-primary text-center mb-12">
+          <h2 className="text-2xl font-bold text-devsnap-primary text-center mb-12">
             Compliance y Estándares
           </h2>
           
@@ -164,7 +164,7 @@ const CiberseguridadPage: React.FC<CiberseguridadPageProps> = ({ content }) => {
             ].map((std, index) => (
               <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
                 <div className="text-3xl mb-4">{std.icon}</div>
-                <h3 className="text-lg font-bold text-blautech-primary mb-3">{std.standard}</h3>
+                <h3 className="text-lg font-bold text-devsnap-primary mb-3">{std.standard}</h3>
                 <p className="text-gray-600 text-sm">{std.description}</p>
               </div>
             ))}
@@ -173,7 +173,7 @@ const CiberseguridadPage: React.FC<CiberseguridadPageProps> = ({ content }) => {
 
         {/* Threat Landscape */}
         <div className="fade-in-up stagger-5">
-          <h2 className="text-2xl font-bold text-blautech-primary text-center mb-12">
+          <h2 className="text-2xl font-bold text-devsnap-primary text-center mb-12">
             Amenazas que Combatimos
           </h2>
           
@@ -196,7 +196,7 @@ const CiberseguridadPage: React.FC<CiberseguridadPageProps> = ({ content }) => {
               }
             ].map((category, index) => (
               <div key={index} className="bg-white rounded-xl p-6 shadow-lg border border-red-100">
-                <h3 className="text-lg font-bold text-blautech-primary mb-3">{category.category}</h3>
+                <h3 className="text-lg font-bold text-devsnap-primary mb-3">{category.category}</h3>
                 <p className="text-gray-600 mb-4 text-sm">{category.description}</p>
                 <div className="space-y-2">
                   {category.threats.map((threat, threatIndex) => (
@@ -213,7 +213,7 @@ const CiberseguridadPage: React.FC<CiberseguridadPageProps> = ({ content }) => {
 
         {/* Security Metrics */}
         <div className="fade-in-up stagger-6">
-          <h2 className="text-2xl font-bold text-blautech-primary text-center mb-12">
+          <h2 className="text-2xl font-bold text-devsnap-primary text-center mb-12">
             Métricas de Seguridad Comprobadas
           </h2>
           

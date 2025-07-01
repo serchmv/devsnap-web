@@ -6,14 +6,14 @@ interface AutomatizacionRPAPageProps {
 
 const AutomatizacionRPAPage: React.FC<AutomatizacionRPAPageProps> = ({ content }) => {
   return (
-    <section id="automatizacion-rpa" className="blautech-section bg-gradient-to-br from-blue-50 via-white to-cyan-50">
-      <div className="blautech-container">
+    <section id="automatizacion-rpa" className="devsnap-section bg-gradient-to-br from-blue-50 via-white to-cyan-50">
+      <div className="devsnap-container">
         {/* Header */}
         <div className="text-center mb-16 fade-in-up">
           <div className="inline-block p-4 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-2xl mb-6">
             <span className="text-4xl text-white">⚙️</span>
           </div>
-          <h1 className="blautech-title text-blautech-primary mb-4">
+          <h1 className="devsnap-title text-devsnap-primary mb-4">
             Automatización de Procesos (RPA)
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -25,7 +25,7 @@ const AutomatizacionRPAPage: React.FC<AutomatizacionRPAPageProps> = ({ content }
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
           {/* Left Column - Services */}
           <div className="fade-in-up stagger-1">
-            <h2 className="text-2xl font-bold text-blautech-primary mb-8">
+            <h2 className="text-2xl font-bold text-devsnap-primary mb-8">
               Soluciones de Automatización
             </h2>
             
@@ -48,7 +48,7 @@ const AutomatizacionRPAPage: React.FC<AutomatizacionRPAPageProps> = ({ content }
                 }
               ].map((service, index) => (
                 <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-blue-100">
-                  <h3 className="text-lg font-bold text-blautech-primary mb-3">{service.title}</h3>
+                  <h3 className="text-lg font-bold text-devsnap-primary mb-3">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {service.features.map((feature, featureIndex) => (
@@ -64,7 +64,7 @@ const AutomatizacionRPAPage: React.FC<AutomatizacionRPAPageProps> = ({ content }
 
           {/* Right Column - Benefits */}
           <div className="fade-in-up stagger-2">
-            <h2 className="text-2xl font-bold text-blautech-primary mb-8">
+            <h2 className="text-2xl font-bold text-devsnap-primary mb-8">
               ROI Comprobado
             </h2>
             
@@ -86,7 +86,7 @@ const AutomatizacionRPAPage: React.FC<AutomatizacionRPAPageProps> = ({ content }
 
             {/* Implementation Process */}
             <div className="bg-white rounded-xl p-6 shadow-lg border border-blue-100">
-              <h3 className="text-lg font-bold text-blautech-primary mb-4">Proceso de Implementación</h3>
+              <h3 className="text-lg font-bold text-devsnap-primary mb-4">Proceso de Implementación</h3>
               <div className="space-y-4">
                 {[
                   { step: "1", title: "Análisis de Procesos", duration: "1-2 semanas" },
@@ -112,7 +112,7 @@ const AutomatizacionRPAPage: React.FC<AutomatizacionRPAPageProps> = ({ content }
 
         {/* Industries */}
         <div className="fade-in-up stagger-3">
-          <h2 className="text-2xl font-bold text-blautech-primary text-center mb-12">
+          <h2 className="text-2xl font-bold text-devsnap-primary text-center mb-12">
             Industrias que Transformamos
           </h2>
           
@@ -125,7 +125,7 @@ const AutomatizacionRPAPage: React.FC<AutomatizacionRPAPageProps> = ({ content }
             ].map((industry, index) => (
               <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
                 <div className="text-4xl mb-4">{industry.icon}</div>
-                <h3 className="text-lg font-bold text-blautech-primary mb-3">{industry.industry}</h3>
+                <h3 className="text-lg font-bold text-devsnap-primary mb-3">{industry.industry}</h3>
                 <p className="text-gray-600 text-sm">{industry.description}</p>
               </div>
             ))}

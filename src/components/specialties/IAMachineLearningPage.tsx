@@ -6,14 +6,14 @@ interface IAMachineLearningPageProps {
 
 const IAMachineLearningPage: React.FC<IAMachineLearningPageProps> = ({ content }) => {
   return (
-    <section id="ia-machine-learning" className="blautech-section bg-gradient-to-br from-purple-50 via-white to-indigo-50">
-      <div className="blautech-container">
+    <section id="ia-machine-learning" className="devsnap-section bg-gradient-to-br from-purple-50 via-white to-indigo-50">
+      <div className="devsnap-container">
         {/* Header */}
         <div className="text-center mb-16 fade-in-up">
           <div className="inline-block p-4 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-2xl mb-6">
             <span className="text-4xl text-white">🤖</span>
           </div>
-          <h1 className="blautech-title text-blautech-primary mb-4">
+          <h1 className="devsnap-title text-devsnap-primary mb-4">
             Inteligencia Artificial & Machine Learning
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -25,7 +25,7 @@ const IAMachineLearningPage: React.FC<IAMachineLearningPageProps> = ({ content }
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
           {/* Left Column - Services */}
           <div className="fade-in-up stagger-1">
-            <h2 className="text-2xl font-bold text-blautech-primary mb-8">
+            <h2 className="text-2xl font-bold text-devsnap-primary mb-8">
               Nuestros Servicios de IA
             </h2>
             
@@ -48,7 +48,7 @@ const IAMachineLearningPage: React.FC<IAMachineLearningPageProps> = ({ content }
                 }
               ].map((service, index) => (
                 <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-purple-100">
-                  <h3 className="text-lg font-bold text-blautech-primary mb-3">{service.title}</h3>
+                  <h3 className="text-lg font-bold text-devsnap-primary mb-3">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {service.features.map((feature, featureIndex) => (
@@ -64,7 +64,7 @@ const IAMachineLearningPage: React.FC<IAMachineLearningPageProps> = ({ content }
 
           {/* Right Column - Benefits & Tech Stack */}
           <div className="fade-in-up stagger-2">
-            <h2 className="text-2xl font-bold text-blautech-primary mb-8">
+            <h2 className="text-2xl font-bold text-devsnap-primary mb-8">
               Beneficios para tu Empresa
             </h2>
             
@@ -86,7 +86,7 @@ const IAMachineLearningPage: React.FC<IAMachineLearningPageProps> = ({ content }
 
             {/* Tech Stack */}
             <div className="bg-white rounded-xl p-6 shadow-lg border border-purple-100">
-              <h3 className="text-lg font-bold text-blautech-primary mb-4">Tecnologías que Utilizamos</h3>
+              <h3 className="text-lg font-bold text-devsnap-primary mb-4">Tecnologías que Utilizamos</h3>
               <div className="grid grid-cols-2 gap-4">
                 {[
                   { name: "TensorFlow", logo: "/images/tech-logos/tensorflow-logo.png" },
@@ -112,7 +112,7 @@ const IAMachineLearningPage: React.FC<IAMachineLearningPageProps> = ({ content }
 
         {/* Case Studies */}
         <div className="fade-in-up stagger-3">
-          <h2 className="text-2xl font-bold text-blautech-primary text-center mb-12">
+          <h2 className="text-2xl font-bold text-devsnap-primary text-center mb-12">
             Casos de Éxito Reales
           </h2>
           
@@ -143,7 +143,7 @@ const IAMachineLearningPage: React.FC<IAMachineLearningPageProps> = ({ content }
                     {caseStudy.industry}
                   </span>
                 </div>
-                <h3 className="text-lg font-bold text-blautech-primary mb-3">{caseStudy.title}</h3>
+                <h3 className="text-lg font-bold text-devsnap-primary mb-3">{caseStudy.title}</h3>
                 <p className="text-gray-600 mb-4">{caseStudy.description}</p>
                 <div className="text-center">
                   <span className="inline-block px-4 py-2 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-bold rounded-full">

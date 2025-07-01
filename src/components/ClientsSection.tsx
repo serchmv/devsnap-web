@@ -6,11 +6,11 @@ interface ClientsSectionProps {
 
 const ClientsSection: React.FC<ClientsSectionProps> = ({ content }) => {
   return (
-    <section className="blautech-section bg-blautech-gray">
-      <div className="blautech-container">
+    <section className="devsnap-section bg-devsnap-gray">
+      <div className="devsnap-container">
         {/* Title */}
         <div className="text-center mb-16 fade-in-up">
-          <h2 className="blautech-title text-blautech-primary">
+          <h2 className="devsnap-title text-devsnap-primary">
             {content.clients.title}
           </h2>
         </div>
@@ -20,22 +20,22 @@ const ClientsSection: React.FC<ClientsSectionProps> = ({ content }) => {
           {content.clients.logos.map((client: string, index: number) => (
             <div 
               key={index}
-              className={`blautech-card text-center py-8 hover:scale-105 transition-all duration-300 fade-in-up stagger-${(index % 4) + 1}`}
+              className={`devsnap-card text-center py-8 hover:scale-105 transition-all duration-300 fade-in-up stagger-${(index % 4) + 1}`}
             >
               {/* Client Logo Placeholder */}
-              <div className="w-16 h-16 bg-gradient-to-br from-blautech-secondary to-blautech-success rounded-lg mx-auto mb-4 flex items-center justify-center shadow-lg">
+              <div className="w-16 h-16 bg-gradient-to-br from-devsnap-secondary to-devsnap-success rounded-lg mx-auto mb-4 flex items-center justify-center shadow-lg">
                 <span className="text-white font-bold text-lg">
                   {client.substring(0, 2).toUpperCase()}
                 </span>
               </div>
               
               {/* Client Name */}
-              <h3 className="font-semibold text-blautech-primary text-sm leading-tight">
+              <h3 className="font-semibold text-devsnap-primary text-sm leading-tight">
                 {client}
               </h3>
               
               {/* Decorative Element */}
-              <div className="mt-3 w-8 h-1 bg-gradient-to-r from-blautech-secondary to-blautech-success rounded-full mx-auto opacity-60"></div>
+              <div className="mt-3 w-8 h-1 bg-gradient-to-r from-devsnap-secondary to-devsnap-success rounded-full mx-auto opacity-60"></div>
             </div>
           ))}
         </div>
@@ -52,26 +52,26 @@ const ClientsSection: React.FC<ClientsSectionProps> = ({ content }) => {
             {/* Client Categories */}
             <div className="grid md:grid-cols-3 gap-6 mt-8">
               <div className="text-center">
-                <div className="w-12 h-12 bg-blautech-secondary rounded-full mx-auto mb-3 flex items-center justify-center">
+                <div className="w-12 h-12 bg-devsnap-secondary rounded-full mx-auto mb-3 flex items-center justify-center">
                   <span className="text-white text-xl">📱</span>
                 </div>
-                <h4 className="font-semibold text-blautech-primary mb-2">Telecomunicaciones</h4>
+                <h4 className="font-semibold text-devsnap-primary mb-2">Telecomunicaciones</h4>
                 <p className="text-sm text-gray-600">Líderes en conectividad regional</p>
               </div>
               
               <div className="text-center">
-                <div className="w-12 h-12 bg-blautech-success rounded-full mx-auto mb-3 flex items-center justify-center">
+                <div className="w-12 h-12 bg-devsnap-success rounded-full mx-auto mb-3 flex items-center justify-center">
                   <span className="text-white text-xl">🏦</span>
                 </div>
-                <h4 className="font-semibold text-blautech-primary mb-2">Servicios Financieros</h4>
+                <h4 className="font-semibold text-devsnap-primary mb-2">Servicios Financieros</h4>
                 <p className="text-sm text-gray-600">Bancos e instituciones financieras</p>
               </div>
               
               <div className="text-center">
-                <div className="w-12 h-12 bg-blautech-accent rounded-full mx-auto mb-3 flex items-center justify-center">
+                <div className="w-12 h-12 bg-devsnap-accent rounded-full mx-auto mb-3 flex items-center justify-center">
                   <span className="text-white text-xl">🛍️</span>
                 </div>
-                <h4 className="font-semibold text-blautech-primary mb-2">Retail & E-commerce</h4>
+                <h4 className="font-semibold text-devsnap-primary mb-2">Retail & E-commerce</h4>
                 <p className="text-sm text-gray-600">Experiencias comerciales digitales</p>
               </div>
             </div>
@@ -80,7 +80,7 @@ const ClientsSection: React.FC<ClientsSectionProps> = ({ content }) => {
         
         {/* Partnership Message */}
         <div className="mt-12 text-center fade-in-up stagger-5">
-          <div className="inline-flex items-center space-x-4 bg-gradient-to-r from-blautech-secondary to-blautech-success text-white px-8 py-4 rounded-full shadow-lg">
+          <div className="inline-flex items-center space-x-4 bg-gradient-to-r from-devsnap-secondary to-devsnap-success text-white px-8 py-4 rounded-full shadow-lg">
             <span className="text-2xl">🤝</span>
             <span className="font-semibold">Socios estratégicos en transformación digital</span>
           </div>

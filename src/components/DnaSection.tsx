@@ -6,12 +6,12 @@ interface DnaSectionProps {
 
 const DnaSection: React.FC<DnaSectionProps> = ({ content }) => {
   return (
-    <section className="blautech-section bg-blautech-gray">
-      <div className="blautech-container">
+    <section className="devsnap-section bg-devsnap-gray">
+      <div className="devsnap-container">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="fade-in-up">
-            <h2 className="blautech-title text-blautech-primary">
+            <h2 className="devsnap-title text-devsnap-primary">
               {content.dna.title}
             </h2>
             
@@ -26,9 +26,9 @@ const DnaSection: React.FC<DnaSectionProps> = ({ content }) => {
                 {content.dna.features.map((feature: string, index: number) => (
                   <div 
                     key={index} 
-                    className={`blautech-card text-center py-6 fade-in-up stagger-${index + 1}`}
+                    className={`devsnap-card text-center py-6 fade-in-up stagger-${index + 1}`}
                   >
-                    <div className="w-12 h-12 bg-gradient-to-r from-blautech-secondary to-blautech-success rounded-full mx-auto mb-3 flex items-center justify-center">
+                    <div className="w-12 h-12 bg-gradient-to-r from-devsnap-secondary to-devsnap-success rounded-full mx-auto mb-3 flex items-center justify-center">
                       <span className="text-white text-xl">
                         {index === 0 && '🔗'}
                         {index === 1 && '🔄'}
@@ -37,7 +37,7 @@ const DnaSection: React.FC<DnaSectionProps> = ({ content }) => {
                         {index === 4 && '🌐'}
                       </span>
                     </div>
-                    <p className="font-semibold text-blautech-primary text-sm">
+                    <p className="font-semibold text-devsnap-primary text-sm">
                       {feature}
                     </p>
                   </div>
@@ -48,18 +48,18 @@ const DnaSection: React.FC<DnaSectionProps> = ({ content }) => {
               <div className="mt-8">
                 <div className="relative">
                   <div className="flex items-center justify-center space-x-4">
-                    <div className="w-4 h-4 bg-blautech-secondary rounded-full"></div>
-                    <div className="w-6 h-6 bg-blautech-success rounded-full"></div>
-                    <div className="w-8 h-8 bg-blautech-accent rounded-full"></div>
-                    <div className="w-6 h-6 bg-blautech-orange rounded-full"></div>
-                    <div className="w-4 h-4 bg-blautech-secondary rounded-full"></div>
+                    <div className="w-4 h-4 bg-devsnap-secondary rounded-full"></div>
+                    <div className="w-6 h-6 bg-devsnap-success rounded-full"></div>
+                    <div className="w-8 h-8 bg-devsnap-accent rounded-full"></div>
+                    <div className="w-6 h-6 bg-devsnap-orange rounded-full"></div>
+                    <div className="w-4 h-4 bg-devsnap-secondary rounded-full"></div>
                   </div>
                   <div className="flex items-center justify-center space-x-4 mt-4">
-                    <div className="w-6 h-6 bg-blautech-orange rounded-full"></div>
-                    <div className="w-4 h-4 bg-blautech-accent rounded-full"></div>
-                    <div className="w-6 h-6 bg-blautech-secondary rounded-full"></div>
-                    <div className="w-8 h-8 bg-blautech-success rounded-full"></div>
-                    <div className="w-4 h-4 bg-blautech-accent rounded-full"></div>
+                    <div className="w-6 h-6 bg-devsnap-orange rounded-full"></div>
+                    <div className="w-4 h-4 bg-devsnap-accent rounded-full"></div>
+                    <div className="w-6 h-6 bg-devsnap-secondary rounded-full"></div>
+                    <div className="w-8 h-8 bg-devsnap-success rounded-full"></div>
+                    <div className="w-4 h-4 bg-devsnap-accent rounded-full"></div>
                   </div>
                   
                   {/* Connecting Lines */}
@@ -90,7 +90,7 @@ const DnaSection: React.FC<DnaSectionProps> = ({ content }) => {
               <div className="absolute top-4 right-4 w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center opacity-90">
                 <span className="text-2xl">🧬</span>
               </div>
-              <div className="absolute bottom-4 left-4 w-12 h-12 bg-blautech-secondary rounded-full shadow-lg flex items-center justify-center">
+              <div className="absolute bottom-4 left-4 w-12 h-12 bg-devsnap-secondary rounded-full shadow-lg flex items-center justify-center">
                 <span className="text-white text-xl">💻</span>
               </div>
             </div>

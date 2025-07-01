@@ -6,14 +6,14 @@ interface APIMicroservicesPageProps {
 
 const APIMicroservicesPage: React.FC<APIMicroservicesPageProps> = ({ content }) => {
   return (
-    <section id="apis-microservicios" className="blautech-section bg-gradient-to-br from-orange-50 via-white to-red-50">
-      <div className="blautech-container">
+    <section id="apis-microservicios" className="devsnap-section bg-gradient-to-br from-orange-50 via-white to-red-50">
+      <div className="devsnap-container">
         {/* Header */}
         <div className="text-center mb-16 fade-in-up">
           <div className="inline-block p-4 bg-gradient-to-r from-orange-500 to-red-600 rounded-2xl mb-6">
             <span className="text-4xl text-white">🔗</span>
           </div>
-          <h1 className="blautech-title text-blautech-primary mb-4">
+          <h1 className="devsnap-title text-devsnap-primary mb-4">
             APIs & Microservicios
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -25,7 +25,7 @@ const APIMicroservicesPage: React.FC<APIMicroservicesPageProps> = ({ content }) 
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
           {/* Left Column - Services */}
           <div className="fade-in-up stagger-1">
-            <h2 className="text-2xl font-bold text-blautech-primary mb-8">
+            <h2 className="text-2xl font-bold text-devsnap-primary mb-8">
               Servicios de Arquitectura Moderna
             </h2>
             
@@ -48,7 +48,7 @@ const APIMicroservicesPage: React.FC<APIMicroservicesPageProps> = ({ content }) 
                 }
               ].map((service, index) => (
                 <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-orange-100">
-                  <h3 className="text-lg font-bold text-blautech-primary mb-3">{service.title}</h3>
+                  <h3 className="text-lg font-bold text-devsnap-primary mb-3">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {service.features.map((feature, featureIndex) => (
@@ -64,7 +64,7 @@ const APIMicroservicesPage: React.FC<APIMicroservicesPageProps> = ({ content }) 
 
           {/* Right Column - Architecture Benefits */}
           <div className="fade-in-up stagger-2">
-            <h2 className="text-2xl font-bold text-blautech-primary mb-8">
+            <h2 className="text-2xl font-bold text-devsnap-primary mb-8">
               Beneficios de Microservicios
             </h2>
             
@@ -86,7 +86,7 @@ const APIMicroservicesPage: React.FC<APIMicroservicesPageProps> = ({ content }) 
 
             {/* Tech Stack */}
             <div className="bg-white rounded-xl p-6 shadow-lg border border-orange-100">
-              <h3 className="text-lg font-bold text-blautech-primary mb-4">Stack Tecnológico</h3>
+              <h3 className="text-lg font-bold text-devsnap-primary mb-4">Stack Tecnológico</h3>
               <div className="space-y-4">
                 <div>
                   <h4 className="font-semibold text-orange-600 mb-2">Backend & APIs:</h4>
@@ -125,7 +125,7 @@ const APIMicroservicesPage: React.FC<APIMicroservicesPageProps> = ({ content }) 
 
         {/* Implementation Approach */}
         <div className="fade-in-up stagger-3">
-          <h2 className="text-2xl font-bold text-blautech-primary text-center mb-12">
+          <h2 className="text-2xl font-bold text-devsnap-primary text-center mb-12">
             Metodología de Implementación
           </h2>
           
@@ -143,7 +143,7 @@ const APIMicroservicesPage: React.FC<APIMicroservicesPageProps> = ({ content }) 
                   {phase.step}
                 </div>
                 <div className="text-2xl mb-2">{phase.icon}</div>
-                <h3 className="text-sm font-bold text-blautech-primary mb-1">{phase.title}</h3>
+                <h3 className="text-sm font-bold text-devsnap-primary mb-1">{phase.title}</h3>
                 <p className="text-gray-600 text-xs">{phase.description}</p>
               </div>
             ))}
@@ -152,7 +152,7 @@ const APIMicroservicesPage: React.FC<APIMicroservicesPageProps> = ({ content }) 
 
         {/* API Types & Patterns */}
         <div className="fade-in-up stagger-4">
-          <h2 className="text-2xl font-bold text-blautech-primary text-center mb-12">
+          <h2 className="text-2xl font-bold text-devsnap-primary text-center mb-12">
             Tipos de APIs que Desarrollamos
           </h2>
           
@@ -186,7 +186,7 @@ const APIMicroservicesPage: React.FC<APIMicroservicesPageProps> = ({ content }) 
               <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-orange-100">
                 <div className="text-center mb-4">
                   <div className="text-3xl mb-2">{apiType.icon}</div>
-                  <h3 className="text-lg font-bold text-blautech-primary">{apiType.type}</h3>
+                  <h3 className="text-lg font-bold text-devsnap-primary">{apiType.type}</h3>
                   <p className="text-gray-600 text-sm">{apiType.description}</p>
                 </div>
                 <div className="space-y-2">
@@ -204,7 +204,7 @@ const APIMicroservicesPage: React.FC<APIMicroservicesPageProps> = ({ content }) 
 
         {/* Integration Examples */}
         <div className="fade-in-up stagger-5">
-          <h2 className="text-2xl font-bold text-blautech-primary text-center mb-12">
+          <h2 className="text-2xl font-bold text-devsnap-primary text-center mb-12">
             Casos de Integración Exitosa
           </h2>
           
@@ -224,7 +224,7 @@ const APIMicroservicesPage: React.FC<APIMicroservicesPageProps> = ({ content }) 
               }
             ].map((integration, index) => (
               <div key={index} className="bg-white rounded-xl p-8 shadow-lg border border-orange-100">
-                <h3 className="text-lg font-bold text-blautech-primary mb-4">{integration.company}</h3>
+                <h3 className="text-lg font-bold text-devsnap-primary mb-4">{integration.company}</h3>
                 <div className="space-y-4">
                   <div>
                     <h4 className="font-semibold text-red-600 mb-2">Desafío:</h4>
@@ -252,7 +252,7 @@ const APIMicroservicesPage: React.FC<APIMicroservicesPageProps> = ({ content }) 
 
         {/* Monitoring & Security */}
         <div className="fade-in-up stagger-6">
-          <h2 className="text-2xl font-bold text-blautech-primary text-center mb-12">
+          <h2 className="text-2xl font-bold text-devsnap-primary text-center mb-12">
             Seguridad y Monitoreo de APIs
           </h2>
           
@@ -277,7 +277,7 @@ const APIMicroservicesPage: React.FC<APIMicroservicesPageProps> = ({ content }) 
               <div key={index} className="bg-white rounded-xl p-6 shadow-lg border border-orange-100">
                 <div className="text-center mb-4">
                   <div className="text-3xl mb-2">{aspect.icon}</div>
-                  <h3 className="text-lg font-bold text-blautech-primary">{aspect.category}</h3>
+                  <h3 className="text-lg font-bold text-devsnap-primary">{aspect.category}</h3>
                 </div>
                 <div className="space-y-2">
                   {aspect.items.map((item, itemIndex) => (

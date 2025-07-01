@@ -18,22 +18,22 @@ const NewsletterSection: React.FC<NewsletterSectionProps> = ({ content }) => {
   };
 
   return (
-    <section id="newsletter" className="blautech-section bg-blautech-gray">
-      <div className="blautech-container">
+    <section id="newsletter" className="devsnap-section bg-devsnap-gray">
+      <div className="devsnap-container">
         <div className="max-w-4xl mx-auto text-center">
           {/* Title */}
           <div className="fade-in-up mb-8">
-            <h2 className="blautech-title text-blautech-primary">
+            <h2 className="devsnap-title text-devsnap-primary">
               {content.newsletter.title}
             </h2>
             <p className="text-lg text-gray-600 mb-8">
               Mantente actualizado con las últimas tendencias en tecnología, 
-              casos de éxito y novedades de Blautech.
+              casos de éxito y novedades de Devsnap.
             </p>
           </div>
           
           {/* Newsletter Form */}
-          <div className="blautech-card max-w-2xl mx-auto fade-in-up stagger-1">
+          <div className="devsnap-card max-w-2xl mx-auto fade-in-up stagger-1">
             {!isSubscribed ? (
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Email Input */}
@@ -45,12 +45,12 @@ const NewsletterSection: React.FC<NewsletterSectionProps> = ({ content }) => {
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder={content.newsletter.placeholder}
                       required
-                      className="w-full px-6 py-4 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blautech-secondary focus:border-transparent text-lg"
+                      className="w-full px-6 py-4 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-devsnap-secondary focus:border-transparent text-lg"
                     />
                   </div>
                   <button
                     type="submit"
-                    className="blautech-btn-primary whitespace-nowrap"
+                    className="devsnap-btn-primary whitespace-nowrap"
                   >
                     {content.newsletter.button}
                   </button>
@@ -58,16 +58,16 @@ const NewsletterSection: React.FC<NewsletterSectionProps> = ({ content }) => {
                 
                 {/* Privacy Notice */}
                 <p className="text-xs text-gray-500 leading-relaxed">
-                  Al suscribirte, aceptas recibir emails de Blautech con información sobre 
+                  Al suscribirte, aceptas recibir emails de Devsnap con información sobre 
                   tecnología, productos y servicios. Puedes desuscribirte en cualquier momento.
                 </p>
               </form>
             ) : (
               <div className="text-center py-8">
-                <div className="w-16 h-16 bg-blautech-success rounded-full mx-auto mb-4 flex items-center justify-center">
+                <div className="w-16 h-16 bg-devsnap-success rounded-full mx-auto mb-4 flex items-center justify-center">
                   <span className="text-white text-2xl">✓</span>
                 </div>
-                <h3 className="text-2xl font-bold text-blautech-success mb-2">
+                <h3 className="text-2xl font-bold text-devsnap-success mb-2">
                   ¡Suscripción Exitosa!
                 </h3>
                 <p className="text-gray-600">
@@ -80,26 +80,26 @@ const NewsletterSection: React.FC<NewsletterSectionProps> = ({ content }) => {
           {/* Benefits */}
           <div className="grid md:grid-cols-3 gap-6 mt-12 fade-in-up stagger-2">
             <div className="text-center">
-              <div className="w-12 h-12 bg-blautech-secondary rounded-full mx-auto mb-3 flex items-center justify-center">
+              <div className="w-12 h-12 bg-devsnap-secondary rounded-full mx-auto mb-3 flex items-center justify-center">
                 <span className="text-white text-xl">📧</span>
               </div>
-              <h4 className="font-semibold text-blautech-primary mb-2">Contenido Exclusivo</h4>
+              <h4 className="font-semibold text-devsnap-primary mb-2">Contenido Exclusivo</h4>
               <p className="text-sm text-gray-600">Insights y tendencias tecnológicas</p>
             </div>
             
             <div className="text-center">
-              <div className="w-12 h-12 bg-blautech-success rounded-full mx-auto mb-3 flex items-center justify-center">
+              <div className="w-12 h-12 bg-devsnap-success rounded-full mx-auto mb-3 flex items-center justify-center">
                 <span className="text-white text-xl">🎯</span>
               </div>
-              <h4 className="font-semibold text-blautech-primary mb-2">Casos de Éxito</h4>
+              <h4 className="font-semibold text-devsnap-primary mb-2">Casos de Éxito</h4>
               <p className="text-sm text-gray-600">Historias reales de transformación</p>
             </div>
             
             <div className="text-center">
-              <div className="w-12 h-12 bg-blautech-accent rounded-full mx-auto mb-3 flex items-center justify-center">
+              <div className="w-12 h-12 bg-devsnap-accent rounded-full mx-auto mb-3 flex items-center justify-center">
                 <span className="text-white text-xl">🚀</span>
               </div>
-              <h4 className="font-semibold text-blautech-primary mb-2">Novedades</h4>
+              <h4 className="font-semibold text-devsnap-primary mb-2">Novedades</h4>
               <p className="text-sm text-gray-600">Primero en conocer nuevos servicios</p>
             </div>
           </div>

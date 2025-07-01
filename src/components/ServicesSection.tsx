@@ -6,11 +6,11 @@ interface ServicesSectionProps {
 
 const ServicesSection: React.FC<ServicesSectionProps> = ({ content }) => {
   return (
-    <section className="blautech-section bg-blautech-primary">
-      <div className="blautech-container">
+    <section className="devsnap-section bg-devsnap-primary">
+      <div className="devsnap-container">
         {/* Header */}
         <div className="text-center mb-16 fade-in-up">
-          <h2 className="blautech-title text-white">
+          <h2 className="devsnap-title text-white">
             {content.services.title}
           </h2>
         </div>
@@ -20,7 +20,7 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ content }) => {
           {content.services.categories.map((category: any, index: number) => (
             <div 
               key={index}
-              className={`blautech-card fade-in-up stagger-${index + 1}`}
+              className={`devsnap-card fade-in-up stagger-${index + 1}`}
             >
               {/* Service Image */}
               <div className="relative mb-6 rounded-lg overflow-hidden">
@@ -30,7 +30,7 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ content }) => {
                   className="w-full h-48 object-cover"
                 />
                 {/* Hexagonal Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-r from-blautech-secondary/80 to-blautech-success/80 flex items-center justify-center">
+                <div className="absolute inset-0 bg-gradient-to-r from-devsnap-secondary/80 to-devsnap-success/80 flex items-center justify-center">
                   <div className="text-center">
                     <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4 mx-auto">
                       <span className="text-3xl">{category.icon}</span>
@@ -52,11 +52,11 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ content }) => {
               
               {/* Service Content */}
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-r from-blautech-secondary to-blautech-success rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-gradient-to-r from-devsnap-secondary to-devsnap-success rounded-full flex items-center justify-center flex-shrink-0">
                   <span className="text-white text-xl">{category.icon}</span>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-bold text-blautech-primary mb-3">
+                  <h3 className="text-xl font-bold text-devsnap-primary mb-3">
                     {category.title}
                   </h3>
                   <p className="text-gray-600 mb-4 leading-relaxed">
@@ -68,7 +68,7 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ content }) => {
                     {category.services.map((service: string, serviceIndex: number) => (
                       <span 
                         key={serviceIndex}
-                        className="px-3 py-1 bg-gradient-to-r from-blautech-secondary/10 to-blautech-success/10 text-blautech-secondary text-sm rounded-full border border-blautech-secondary/20 font-medium"
+                        className="px-3 py-1 bg-gradient-to-r from-devsnap-secondary/10 to-devsnap-success/10 text-devsnap-secondary text-sm rounded-full border border-devsnap-secondary/20 font-medium"
                       >
                         {service}
                       </span>
@@ -91,7 +91,7 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ content }) => {
             </p>
             <a 
               href="#contacto" 
-              className="blautech-btn-secondary bg-transparent border-white text-white hover:bg-white hover:text-blautech-primary"
+              className="devsnap-btn-secondary bg-transparent border-white text-white hover:bg-white hover:text-devsnap-primary"
             >
               CONOCER MÁS
             </a>

@@ -22,17 +22,17 @@ const Header: React.FC<HeaderProps> = ({ content }) => {
     <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
     }`}>
-      <div className="blautech-container">
+      <div className="devsnap-container">
         <nav className="flex items-center justify-between py-4">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-blautech-secondary rounded-full flex items-center justify-center">
+            <div className="w-10 h-10 bg-devsnap-secondary rounded-full flex items-center justify-center">
               <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
-                <div className="w-3 h-3 bg-blautech-secondary rounded-full"></div>
+                <div className="w-3 h-3 bg-devsnap-secondary rounded-full"></div>
               </div>
             </div>
             <div className="flex flex-col">
-              <span className={`text-xl font-bold ${isScrolled ? 'text-blautech-primary' : 'text-white'}`}>
+              <span className={`text-xl font-bold ${isScrolled ? 'text-devsnap-primary' : 'text-white'}`}>
                 {content.branding.logo}
               </span>
               <span className={`text-xs font-light ${isScrolled ? 'text-gray-600' : 'text-gray-300'}`}>
@@ -49,8 +49,8 @@ const Header: React.FC<HeaderProps> = ({ content }) => {
                 <a
                   key={index}
                   href={item.href}
-                  className={`font-medium transition-colors duration-300 hover:text-blautech-secondary ${
-                    isScrolled ? 'text-blautech-primary' : 'text-white'
+                  className={`font-medium transition-colors duration-300 hover:text-devsnap-secondary ${
+                    isScrolled ? 'text-devsnap-primary' : 'text-white'
                   } ${item.label === 'ENG' ? 'flex items-center space-x-1' : ''}`}
                 >
                   {item.label === 'ENG' && (
@@ -87,8 +87,8 @@ const Header: React.FC<HeaderProps> = ({ content }) => {
                 href={`tel:${content.navigation.contact.phone}`}
                 className={`flex items-center space-x-2 px-4 py-2 rounded-full border-2 transition-all duration-300 hover:scale-105 ${
                   isScrolled 
-                    ? 'border-blautech-primary text-blautech-primary hover:bg-blautech-primary hover:text-white' 
-                    : 'border-white text-white hover:bg-white hover:text-blautech-primary'
+                    ? 'border-devsnap-primary text-devsnap-primary hover:bg-devsnap-primary hover:text-white' 
+                    : 'border-white text-white hover:bg-white hover:text-devsnap-primary'
                 }`}
               >
                 <Phone size={16} />
@@ -100,7 +100,7 @@ const Header: React.FC<HeaderProps> = ({ content }) => {
           {/* Mobile Menu Button */}
           <button
             className={`md:hidden p-2 rounded-lg transition-colors duration-300 ${
-              isScrolled ? 'text-blautech-primary' : 'text-white'
+              isScrolled ? 'text-devsnap-primary' : 'text-white'
             }`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
@@ -117,7 +117,7 @@ const Header: React.FC<HeaderProps> = ({ content }) => {
                 <a
                   key={index}
                   href={item.href}
-                  className="block px-4 py-2 text-blautech-primary font-medium hover:bg-gray-50 transition-colors duration-300"
+                  className="block px-4 py-2 text-devsnap-primary font-medium hover:bg-gray-50 transition-colors duration-300"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.label}
@@ -140,7 +140,7 @@ const Header: React.FC<HeaderProps> = ({ content }) => {
                   
                   <a
                     href={`tel:${content.navigation.contact.phone}`}
-                    className="flex items-center space-x-3 w-full border-2 border-blautech-primary text-blautech-primary px-4 py-3 rounded-lg hover:bg-blautech-primary hover:text-white transition-all duration-300"
+                    className="flex items-center space-x-3 w-full border-2 border-devsnap-primary text-devsnap-primary px-4 py-3 rounded-lg hover:bg-devsnap-primary hover:text-white transition-all duration-300"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     <Phone size={20} />

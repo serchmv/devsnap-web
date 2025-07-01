@@ -6,14 +6,14 @@
 
 @layer base {
   :root {
-    --blautech-primary: #2C3E50;
-    --blautech-secondary: #6C63FF;
-    --blautech-accent: #E91E63;
-    --blautech-success: #20B2AA;
-    --blautech-orange: #FF9500;
-    --blautech-white: #FFFFFF;
-    --blautech-gray: #F8F9FA;
-    --blautech-dark: #1a1a1a;
+    --devsnap-primary: #2C3E50;
+    --devsnap-secondary: #6C63FF;
+    --devsnap-accent: #E91E63;
+    --devsnap-success: #20B2AA;
+    --devsnap-orange: #FF9500;
+    --devsnap-white: #FFFFFF;
+    --devsnap-gray: #F8F9FA;
+    --devsnap-dark: #1a1a1a;
     
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
@@ -60,39 +60,39 @@
 }
 
 @layer components {
-  .blautech-gradient-bg {
+  .devsnap-gradient-bg {
     background: linear-gradient(135deg, #2C3E50 0%, #34495E 50%, #2C3E50 100%);
   }
   
-  .blautech-hero-gradient {
+  .devsnap-hero-gradient {
     background: linear-gradient(135deg, rgba(44, 62, 80, 0.9) 0%, rgba(52, 73, 94, 0.8) 50%, rgba(44, 62, 80, 0.9) 100%);
   }
   
-  .blautech-card {
+  .devsnap-card {
     @apply bg-white rounded-lg shadow-lg p-8 transition-all duration-300 hover:shadow-xl;
   }
   
-  .blautech-btn-primary {
+  .devsnap-btn-primary {
     @apply bg-gradient-to-r from-[#6C63FF] to-[#20B2AA] text-white px-8 py-3 rounded-full font-semibold text-sm uppercase tracking-wider transition-all duration-300 hover:shadow-lg hover:scale-105;
   }
   
-  .blautech-btn-secondary {
+  .devsnap-btn-secondary {
     @apply border-2 border-[#6C63FF] text-[#6C63FF] px-8 py-3 rounded-full font-semibold text-sm uppercase tracking-wider transition-all duration-300 hover:bg-[#6C63FF] hover:text-white;
   }
   
-  .blautech-section {
+  .devsnap-section {
     @apply py-16 px-4 md:px-8 lg:px-16;
   }
   
-  .blautech-container {
+  .devsnap-container {
     @apply max-w-7xl mx-auto;
   }
   
-  .blautech-title {
+  .devsnap-title {
     @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-6;
   }
   
-  .blautech-subtitle {
+  .devsnap-subtitle {
     @apply text-lg md:text-xl text-gray-600 mb-8;
   }
   
@@ -125,18 +125,18 @@
 }
 
 @layer utilities {
-  .text-blautech-primary { color: var(--blautech-primary); }
-  .text-blautech-secondary { color: var(--blautech-secondary); }
-  .text-blautech-accent { color: var(--blautech-accent); }
-  .text-blautech-success { color: var(--blautech-success); }
-  .text-blautech-orange { color: var(--blautech-orange); }
+  .text-devsnap-primary { color: var(--devsnap-primary); }
+  .text-devsnap-secondary { color: var(--devsnap-secondary); }
+  .text-devsnap-accent { color: var(--devsnap-accent); }
+  .text-devsnap-success { color: var(--devsnap-success); }
+  .text-devsnap-orange { color: var(--devsnap-orange); }
   
-  .bg-blautech-primary { background-color: var(--blautech-primary); }
-  .bg-blautech-secondary { background-color: var(--blautech-secondary); }
-  .bg-blautech-accent { background-color: var(--blautech-accent); }
-  .bg-blautech-success { background-color: var(--blautech-success); }
-  .bg-blautech-orange { background-color: var(--blautech-orange); }
-  .bg-blautech-gray { background-color: var(--blautech-gray); }
+  .bg-devsnap-primary { background-color: var(--devsnap-primary); }
+  .bg-devsnap-secondary { background-color: var(--devsnap-secondary); }
+  .bg-devsnap-accent { background-color: var(--devsnap-accent); }
+  .bg-devsnap-success { background-color: var(--devsnap-success); }
+  .bg-devsnap-orange { background-color: var(--devsnap-orange); }
+  .bg-devsnap-gray { background-color: var(--devsnap-gray); }
 }
 
 @keyframes networkFloat {

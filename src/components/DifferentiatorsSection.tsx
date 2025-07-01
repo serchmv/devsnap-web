@@ -6,8 +6,8 @@ interface DifferentiatorsSectionProps {
 
 const DifferentiatorsSection: React.FC<DifferentiatorsSectionProps> = ({ content }) => {
   return (
-    <section className="blautech-section bg-white">
-      <div className="blautech-container">
+    <section className="devsnap-section bg-white">
+      <div className="devsnap-container">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Image */}
           <div className="fade-in-up">
@@ -43,10 +43,10 @@ const DifferentiatorsSection: React.FC<DifferentiatorsSectionProps> = ({ content
               </div>
               
               {/* Floating Elements */}
-              <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-blautech-secondary to-blautech-success rounded-full shadow-lg flex items-center justify-center animate-bounce">
+              <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-devsnap-secondary to-devsnap-success rounded-full shadow-lg flex items-center justify-center animate-bounce">
                 <span className="text-white text-xl">⚡</span>
               </div>
-              <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-blautech-accent rounded-full shadow-lg flex items-center justify-center animate-pulse">
+              <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-devsnap-accent rounded-full shadow-lg flex items-center justify-center animate-pulse">
                 <span className="text-white text-lg">💡</span>
               </div>
             </div>
@@ -54,7 +54,7 @@ const DifferentiatorsSection: React.FC<DifferentiatorsSectionProps> = ({ content
           
           {/* Content */}
           <div className="fade-in-up stagger-1">
-            <h2 className="blautech-title text-blautech-primary mb-8">
+            <h2 className="devsnap-title text-devsnap-primary mb-8">
               {content.differentiators.title}
             </h2>
             
@@ -92,7 +92,7 @@ const DifferentiatorsSection: React.FC<DifferentiatorsSectionProps> = ({ content
             
             {/* Visual Elements */}
             <div className="mt-8 fade-in-up stagger-4">
-              <div className="flex items-center justify-center space-x-8 p-6 bg-gradient-to-r from-blautech-gray to-white rounded-lg">
+              <div className="flex items-center justify-center space-x-8 p-6 bg-gradient-to-r from-devsnap-gray to-white rounded-lg">
                 {content.differentiators.features.map((feature: any, index: number) => (
                   <div key={index} className="text-center">
                     <div 
@@ -114,7 +114,7 @@ const DifferentiatorsSection: React.FC<DifferentiatorsSectionProps> = ({ content
             <div className="mt-8 fade-in-up stagger-5">
               <a 
                 href="#contacto" 
-                className="blautech-btn-primary"
+                className="devsnap-btn-primary"
               >
                 DESCUBRE MÁS
               </a>

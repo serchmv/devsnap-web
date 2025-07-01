@@ -6,14 +6,14 @@ interface CloudMigrationPageProps {
 
 const CloudMigrationPage: React.FC<CloudMigrationPageProps> = ({ content }) => {
   return (
-    <section id="cloud-migration" className="blautech-section bg-gradient-to-br from-cyan-50 via-white to-blue-50">
-      <div className="blautech-container">
+    <section id="cloud-migration" className="devsnap-section bg-gradient-to-br from-cyan-50 via-white to-blue-50">
+      <div className="devsnap-container">
         {/* Header */}
         <div className="text-center mb-16 fade-in-up">
           <div className="inline-block p-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl mb-6">
             <span className="text-4xl text-white">☁️</span>
           </div>
-          <h1 className="blautech-title text-blautech-primary mb-4">
+          <h1 className="devsnap-title text-devsnap-primary mb-4">
             Migración a la Nube
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -25,7 +25,7 @@ const CloudMigrationPage: React.FC<CloudMigrationPageProps> = ({ content }) => {
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
           {/* Left Column - Services */}
           <div className="fade-in-up stagger-1">
-            <h2 className="text-2xl font-bold text-blautech-primary mb-8">
+            <h2 className="text-2xl font-bold text-devsnap-primary mb-8">
               Servicios de Migración Cloud
             </h2>
             
@@ -48,7 +48,7 @@ const CloudMigrationPage: React.FC<CloudMigrationPageProps> = ({ content }) => {
                 }
               ].map((service, index) => (
                 <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-cyan-100">
-                  <h3 className="text-lg font-bold text-blautech-primary mb-3">{service.title}</h3>
+                  <h3 className="text-lg font-bold text-devsnap-primary mb-3">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {service.features.map((feature, featureIndex) => (
@@ -64,7 +64,7 @@ const CloudMigrationPage: React.FC<CloudMigrationPageProps> = ({ content }) => {
 
           {/* Right Column - Cloud Providers */}
           <div className="fade-in-up stagger-2">
-            <h2 className="text-2xl font-bold text-blautech-primary mb-8">
+            <h2 className="text-2xl font-bold text-devsnap-primary mb-8">
               Partners Cloud Certificados
             </h2>
             
@@ -128,7 +128,7 @@ const CloudMigrationPage: React.FC<CloudMigrationPageProps> = ({ content }) => {
 
         {/* Migration Journey */}
         <div className="fade-in-up stagger-3">
-          <h2 className="text-2xl font-bold text-blautech-primary text-center mb-12">
+          <h2 className="text-2xl font-bold text-devsnap-primary text-center mb-12">
             Metodología de Migración Probada
           </h2>
           
@@ -144,7 +144,7 @@ const CloudMigrationPage: React.FC<CloudMigrationPageProps> = ({ content }) => {
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mb-4 mx-auto">
                   {phase.phase}
                 </div>
-                <h3 className="text-lg font-bold text-blautech-primary mb-2">{phase.title}</h3>
+                <h3 className="text-lg font-bold text-devsnap-primary mb-2">{phase.title}</h3>
                 <p className="text-gray-600 text-sm mb-2">{phase.description}</p>
                 <span className="text-xs text-cyan-600 font-medium">{phase.duration}</span>
               </div>
@@ -154,7 +154,7 @@ const CloudMigrationPage: React.FC<CloudMigrationPageProps> = ({ content }) => {
 
         {/* Success Stories */}
         <div className="fade-in-up stagger-4">
-          <h2 className="text-2xl font-bold text-blautech-primary text-center mb-12">
+          <h2 className="text-2xl font-bold text-devsnap-primary text-center mb-12">
             Historias de Éxito
           </h2>
           
@@ -174,7 +174,7 @@ const CloudMigrationPage: React.FC<CloudMigrationPageProps> = ({ content }) => {
               }
             ].map((story, index) => (
               <div key={index} className="bg-white rounded-xl p-8 shadow-lg border border-cyan-100">
-                <h3 className="text-lg font-bold text-blautech-primary mb-4">{story.company}</h3>
+                <h3 className="text-lg font-bold text-devsnap-primary mb-4">{story.company}</h3>
                 <div className="space-y-4">
                   <div>
                     <h4 className="font-semibold text-red-600 mb-2">Desafío:</h4>

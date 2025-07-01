@@ -6,11 +6,11 @@ interface AboutUsSectionProps {
 
 const AboutUsSection: React.FC<AboutUsSectionProps> = ({ content }) => {
   return (
-    <section className="blautech-section bg-blautech-gray">
-      <div className="blautech-container">
+    <section className="devsnap-section bg-devsnap-gray">
+      <div className="devsnap-container">
         {/* Title */}
         <div className="text-center mb-16 fade-in-up">
-          <h2 className="blautech-title text-blautech-primary">
+          <h2 className="devsnap-title text-devsnap-primary">
             {content.aboutUs.title}
           </h2>
         </div>
@@ -22,7 +22,7 @@ const AboutUsSection: React.FC<AboutUsSectionProps> = ({ content }) => {
               key={index}
               className={`text-center fade-in-up stagger-${index + 1}`}
             >
-              <div className="blautech-card hover:scale-105 transition-transform duration-300">
+              <div className="devsnap-card hover:scale-105 transition-transform duration-300">
                 {/* Stat Icon */}
                 <div 
                   className="w-20 h-20 rounded-full mx-auto mb-6 flex items-center justify-center shadow-lg"
@@ -60,19 +60,19 @@ const AboutUsSection: React.FC<AboutUsSectionProps> = ({ content }) => {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <div className="flex items-center space-x-2">
-                <div className="w-3 h-3 bg-blautech-secondary rounded-full"></div>
+                <div className="w-3 h-3 bg-devsnap-secondary rounded-full"></div>
                 <span className="text-sm font-medium text-gray-600">Experiencia Comprobada</span>
               </div>
               <div className="flex items-center space-x-2">
-                <div className="w-3 h-3 bg-blautech-success rounded-full"></div>
+                <div className="w-3 h-3 bg-devsnap-success rounded-full"></div>
                 <span className="text-sm font-medium text-gray-600">Innovación Constante</span>
               </div>
               <div className="flex items-center space-x-2">
-                <div className="w-3 h-3 bg-blautech-accent rounded-full"></div>
+                <div className="w-3 h-3 bg-devsnap-accent rounded-full"></div>
                 <span className="text-sm font-medium text-gray-600">Resultados Medibles</span>
               </div>
               <div className="flex items-center space-x-2">
-                <div className="w-3 h-3 bg-blautech-orange rounded-full"></div>
+                <div className="w-3 h-3 bg-devsnap-orange rounded-full"></div>
                 <span className="text-sm font-medium text-gray-600">Alcance Regional</span>
               </div>
             </div>

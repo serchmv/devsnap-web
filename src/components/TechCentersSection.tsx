@@ -6,11 +6,11 @@ interface TechCentersSectionProps {
 
 const TechCentersSection: React.FC<TechCentersSectionProps> = ({ content }) => {
   return (
-    <section className="blautech-section bg-blautech-primary">
-      <div className="blautech-container">
+    <section className="devsnap-section bg-devsnap-primary">
+      <div className="devsnap-container">
         {/* Title */}
         <div className="text-center mb-16 fade-in-up">
-          <h2 className="blautech-title text-white">
+          <h2 className="devsnap-title text-white">
             {content.techCenters.title}
           </h2>
           <p className="text-white/90 text-lg">
@@ -23,19 +23,19 @@ const TechCentersSection: React.FC<TechCentersSectionProps> = ({ content }) => {
           {content.techCenters.locations.map((location: any, index: number) => (
             <div 
               key={index}
-              className={`blautech-card fade-in-up stagger-${index + 1}`}
+              className={`devsnap-card fade-in-up stagger-${index + 1}`}
             >
               {/* Video Placeholder */}
               <div className="relative mb-6 rounded-lg overflow-hidden bg-gray-100 h-64">
-                <div className="absolute inset-0 bg-gradient-to-br from-blautech-secondary/20 to-blautech-success/20 flex items-center justify-center">
+                <div className="absolute inset-0 bg-gradient-to-br from-devsnap-secondary/20 to-devsnap-success/20 flex items-center justify-center">
                   <div className="text-center">
                     <div className="w-20 h-20 bg-white rounded-full mx-auto mb-4 flex items-center justify-center shadow-lg">
                       <span className="text-3xl">🏢</span>
                     </div>
-                    <h3 className="text-2xl font-bold text-blautech-primary mb-2">
+                    <h3 className="text-2xl font-bold text-devsnap-primary mb-2">
                       Oficina {location.name}
                     </h3>
-                    <div className="w-16 h-16 bg-blautech-secondary rounded-full mx-auto flex items-center justify-center cursor-pointer hover:scale-110 transition-transform duration-300">
+                    <div className="w-16 h-16 bg-devsnap-secondary rounded-full mx-auto flex items-center justify-center cursor-pointer hover:scale-110 transition-transform duration-300">
                       <span className="text-white text-2xl">▶️</span>
                     </div>
                   </div>
@@ -50,35 +50,35 @@ const TechCentersSection: React.FC<TechCentersSectionProps> = ({ content }) => {
               
               {/* Location Info */}
               <div className="text-center">
-                <h3 className="text-2xl font-bold text-blautech-primary mb-4">
+                <h3 className="text-2xl font-bold text-devsnap-primary mb-4">
                   Tech-Center {location.name}
                 </h3>
                 
                 {/* Location Features */}
                 <div className="grid grid-cols-2 gap-4 mt-6">
                   <div className="text-center">
-                    <div className="w-12 h-12 bg-blautech-secondary rounded-full mx-auto mb-2 flex items-center justify-center">
+                    <div className="w-12 h-12 bg-devsnap-secondary rounded-full mx-auto mb-2 flex items-center justify-center">
                       <span className="text-white text-xl">👥</span>
                     </div>
                     <p className="text-sm font-medium text-gray-600">Equipo Especializado</p>
                   </div>
                   
                   <div className="text-center">
-                    <div className="w-12 h-12 bg-blautech-success rounded-full mx-auto mb-2 flex items-center justify-center">
+                    <div className="w-12 h-12 bg-devsnap-success rounded-full mx-auto mb-2 flex items-center justify-center">
                       <span className="text-white text-xl">🏢</span>
                     </div>
                     <p className="text-sm font-medium text-gray-600">Instalaciones Modernas</p>
                   </div>
                   
                   <div className="text-center">
-                    <div className="w-12 h-12 bg-blautech-accent rounded-full mx-auto mb-2 flex items-center justify-center">
+                    <div className="w-12 h-12 bg-devsnap-accent rounded-full mx-auto mb-2 flex items-center justify-center">
                       <span className="text-white text-xl">🌐</span>
                     </div>
                     <p className="text-sm font-medium text-gray-600">Conectividad Global</p>
                   </div>
                   
                   <div className="text-center">
-                    <div className="w-12 h-12 bg-blautech-orange rounded-full mx-auto mb-2 flex items-center justify-center">
+                    <div className="w-12 h-12 bg-devsnap-orange rounded-full mx-auto mb-2 flex items-center justify-center">
                       <span className="text-white text-xl">⚡</span>
                     </div>
                     <p className="text-sm font-medium text-gray-600">Innovación 24/7</p>
@@ -86,7 +86,7 @@ const TechCentersSection: React.FC<TechCentersSectionProps> = ({ content }) => {
                 </div>
                 
                 {/* Contact Info */}
-                <div className="mt-6 p-4 bg-blautech-gray rounded-lg">
+                <div className="mt-6 p-4 bg-devsnap-gray rounded-lg">
                   <p className="text-sm text-gray-600 mb-2">
                     <strong>Ubicación:</strong> {location.name === 'México' ? 'Ciudad de México, México' : 'Ciudad de Guatemala, Guatemala'}
                   </p>

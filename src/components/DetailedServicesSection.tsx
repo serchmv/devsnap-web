@@ -11,14 +11,14 @@ const DetailedServicesSection: React.FC<DetailedServicesSectionProps> = ({ conte
   if (!detailedServices) return null;
 
   return (
-    <section className="blautech-section bg-gradient-to-br from-gray-50 to-white">
-      <div className="blautech-container">
+    <section className="devsnap-section bg-gradient-to-br from-gray-50 to-white">
+      <div className="devsnap-container">
         {/* Header */}
         <div className="text-center mb-16 fade-in-up">
-          <h2 className="blautech-title text-blautech-primary mb-4">
+          <h2 className="devsnap-title text-devsnap-primary mb-4">
             Especialidades Tecnológicas
           </h2>
-          <p className="text-xl text-blautech-secondary font-medium mb-6">
+          <p className="text-xl text-devsnap-secondary font-medium mb-6">
             Soluciones integrales para impulsar tu transformación digital
           </p>
           <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
@@ -28,7 +28,7 @@ const DetailedServicesSection: React.FC<DetailedServicesSectionProps> = ({ conte
           {/* More Info Button */}
           <a 
             href="#especialidades" 
-            className="inline-flex items-center space-x-2 bg-gradient-to-r from-blautech-secondary to-blautech-success text-white px-8 py-3 rounded-full font-medium hover:shadow-lg transform hover:scale-105 transition-all duration-300"
+            className="inline-flex items-center space-x-2 bg-gradient-to-r from-devsnap-secondary to-devsnap-success text-white px-8 py-3 rounded-full font-medium hover:shadow-lg transform hover:scale-105 transition-all duration-300"
           >
             <span>Más información</span>
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -42,7 +42,7 @@ const DetailedServicesSection: React.FC<DetailedServicesSectionProps> = ({ conte
           {detailedServices.services.map((service: any, index: number) => (
             <div 
               key={index}
-              className={`group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-blautech-secondary/20 fade-in-up stagger-${index + 1} flex flex-col h-full`}
+              className={`group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-devsnap-secondary/20 fade-in-up stagger-${index + 1} flex flex-col h-full`}
               onMouseEnter={() => setActiveService(index)}
             >
               {/* Background Gradient */}
@@ -55,13 +55,13 @@ const DetailedServicesSection: React.FC<DetailedServicesSectionProps> = ({ conte
                 </div>
                 
                 {/* Floating particles animation */}
-                <div className="absolute -top-2 -right-2 w-4 h-4 bg-blautech-secondary rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-bounce transition-all duration-500 delay-100"></div>
-                <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-blautech-success rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-bounce transition-all duration-500 delay-200"></div>
+                <div className="absolute -top-2 -right-2 w-4 h-4 bg-devsnap-secondary rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-bounce transition-all duration-500 delay-100"></div>
+                <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-devsnap-success rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-bounce transition-all duration-500 delay-200"></div>
               </div>
 
               {/* Service Content */}
               <div className="relative z-10 flex flex-col h-full">
-                <h3 className="text-xl font-bold text-blautech-primary mb-4 group-hover:text-blautech-secondary transition-colors duration-300">
+                <h3 className="text-xl font-bold text-devsnap-primary mb-4 group-hover:text-devsnap-secondary transition-colors duration-300">
                   {service.name}
                 </h3>
                 
@@ -71,7 +71,7 @@ const DetailedServicesSection: React.FC<DetailedServicesSectionProps> = ({ conte
 
                 {/* Examples */}
                 <div className="space-y-2 mb-6 flex-grow">
-                  <h4 className="text-sm font-semibold text-blautech-secondary mb-3 uppercase tracking-wide">
+                  <h4 className="text-sm font-semibold text-devsnap-secondary mb-3 uppercase tracking-wide">
                     Casos de Uso:
                   </h4>
                   <div className="space-y-2">
@@ -112,7 +112,7 @@ const DetailedServicesSection: React.FC<DetailedServicesSectionProps> = ({ conte
 
         {/* Call to Action */}
         <div className="text-center fade-in-up stagger-7">
-          <div className="bg-gradient-to-r from-blautech-primary to-blautech-secondary rounded-2xl p-8 text-white relative overflow-hidden">
+          <div className="bg-gradient-to-r from-devsnap-primary to-devsnap-secondary rounded-2xl p-8 text-white relative overflow-hidden">
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-10">
               <div className="absolute top-4 left-4 w-32 h-32 border border-white rounded-full"></div>
@@ -131,13 +131,13 @@ const DetailedServicesSection: React.FC<DetailedServicesSectionProps> = ({ conte
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a 
                   href="#contacto" 
-                  className="bg-white text-blautech-primary px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-colors duration-300 transform hover:scale-105"
+                  className="bg-white text-devsnap-primary px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-colors duration-300 transform hover:scale-105"
                 >
                   SOLICITAR CONSULTORÍA GRATUITA
                 </a>
                 <a 
                   href="#casos-exito" 
-                  className="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-blautech-primary transition-all duration-300"
+                  className="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-devsnap-primary transition-all duration-300"
                 >
                   VER CASOS DE ÉXITO
                 </a>
@@ -148,7 +148,7 @@ const DetailedServicesSection: React.FC<DetailedServicesSectionProps> = ({ conte
 
         {/* Technology Badges */}
         <div className="mt-16 text-center fade-in-up stagger-8">
-          <h4 className="text-lg font-semibold text-blautech-primary mb-6 uppercase tracking-wide">
+          <h4 className="text-lg font-semibold text-devsnap-primary mb-6 uppercase tracking-wide">
             Tecnologías y Plataformas Especializadas
           </h4>
           <div className="flex flex-wrap justify-center gap-6">
@@ -204,7 +204,7 @@ const DetailedServicesSection: React.FC<DetailedServicesSectionProps> = ({ conte
             ].map((tech, index) => (
               <div 
                 key={index}
-                className="group relative bg-white rounded-2xl p-4 shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 cursor-pointer border border-gray-100 hover:border-blautech-secondary/20"
+                className="group relative bg-white rounded-2xl p-4 shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 cursor-pointer border border-gray-100 hover:border-devsnap-secondary/20"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 {/* Background Gradient on Hover */}
@@ -231,7 +231,7 @@ const DetailedServicesSection: React.FC<DetailedServicesSectionProps> = ({ conte
                   
                   {/* Tech Name */}
                   <div className="text-center">
-                    <p className="text-sm font-bold text-blautech-primary group-hover:text-blautech-secondary transition-colors duration-300">
+                    <p className="text-sm font-bold text-devsnap-primary group-hover:text-devsnap-secondary transition-colors duration-300">
                       {tech.shortName}
                     </p>
                     <p className="text-xs text-gray-500 group-hover:text-gray-700 transition-colors duration-300">

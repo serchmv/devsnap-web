@@ -24,22 +24,22 @@ const Footer: React.FC<FooterProps> = ({ content }) => {
   };
 
   return (
-    <footer id="contacto" className="bg-blautech-primary text-white">
+    <footer id="contacto" className="bg-devsnap-primary text-white">
       {/* Main Footer Content */}
-      <div className="blautech-section">
-        <div className="blautech-container">
+      <div className="devsnap-section">
+        <div className="devsnap-container">
           <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
             {/* Company Info */}
             <div className="lg:col-span-2 fade-in-up">
               {/* Logo */}
               <div className="flex items-center space-x-3 mb-6">
                 <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
-                  <div className="w-8 h-8 bg-blautech-secondary rounded-full flex items-center justify-center">
+                  <div className="w-8 h-8 bg-devsnap-secondary rounded-full flex items-center justify-center">
                     <div className="w-4 h-4 bg-white rounded-full"></div>
                   </div>
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-2xl font-bold">BLAUTECH</span>
+                  <span className="text-2xl font-bold">DEVSNAP</span>
                   <span className="text-sm font-light text-gray-300">SIMPLIFYING TECH</span>
                 </div>
               </div>
@@ -53,7 +53,7 @@ const Footer: React.FC<FooterProps> = ({ content }) => {
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
                   <span className="text-xl">📧</span>
-                  <span className="text-white/90">contacto@blautech.com</span>
+                  <span className="text-white/90">contacto@devsnap.com</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <span className="text-xl">📱</span>
@@ -76,7 +76,7 @@ const Footer: React.FC<FooterProps> = ({ content }) => {
                       href={link.href}
                       className="text-white/80 hover:text-white transition-colors duration-300 flex items-center space-x-2"
                     >
-                      <span className="w-2 h-2 bg-blautech-secondary rounded-full"></span>
+                      <span className="w-2 h-2 bg-devsnap-secondary rounded-full"></span>
                       <span>{link.label}</span>
                     </a>
                   </li>
@@ -86,7 +86,7 @@ const Footer: React.FC<FooterProps> = ({ content }) => {
                     href="#newsletter"
                     className="text-white/80 hover:text-white transition-colors duration-300 flex items-center space-x-2"
                   >
-                    <span className="w-2 h-2 bg-blautech-success rounded-full"></span>
+                    <span className="w-2 h-2 bg-devsnap-success rounded-full"></span>
                     <span>Newsletter</span>
                   </a>
                 </li>
@@ -120,7 +120,7 @@ const Footer: React.FC<FooterProps> = ({ content }) => {
                 </p>
                 <a 
                   href="#newsletter" 
-                  className="text-blautech-secondary hover:text-white font-medium text-sm transition-colors duration-300"
+                  className="text-devsnap-secondary hover:text-white font-medium text-sm transition-colors duration-300"
                 >
                   Suscribirse →
                 </a>
@@ -132,10 +132,10 @@ const Footer: React.FC<FooterProps> = ({ content }) => {
       
       {/* Bottom Bar */}
       <div className="border-t border-white/10">
-        <div className="blautech-container py-6">
+        <div className="devsnap-container py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-white/70 text-sm">
-              © 2024 Blautech. Todos los derechos reservados.
+              © 2024 Devsnap. Todos los derechos reservados.
             </div>
             
             <div className="flex items-center space-x-6 text-sm">

@@ -6,12 +6,12 @@ interface ModernizationSectionProps {
 
 const ModernizationSection: React.FC<ModernizationSectionProps> = ({ content }) => {
   return (
-    <section className="blautech-section bg-white">
-      <div className="blautech-container">
+    <section className="devsnap-section bg-white">
+      <div className="devsnap-container">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="fade-in-up">
-            <h2 className="blautech-title text-blautech-primary mb-8">
+            <h2 className="devsnap-title text-devsnap-primary mb-8">
               {content.modernization.title}
             </h2>
             
@@ -19,22 +19,22 @@ const ModernizationSection: React.FC<ModernizationSectionProps> = ({ content }) 
               {content.modernization.categories.map((category: any, index: number) => (
                 <div 
                   key={index}
-                  className={`blautech-card border-l-4 ${
+                  className={`devsnap-card border-l-4 ${
                     index === 0 
-                      ? 'border-blautech-secondary bg-gradient-to-r from-blautech-secondary/5 to-transparent' 
-                      : 'border-blautech-success bg-gradient-to-r from-blautech-success/5 to-transparent'
+                      ? 'border-devsnap-secondary bg-gradient-to-r from-devsnap-secondary/5 to-transparent' 
+                      : 'border-devsnap-success bg-gradient-to-r from-devsnap-success/5 to-transparent'
                   } fade-in-up stagger-${index + 1}`}
                 >
                   <div className="flex items-start space-x-4">
                     <div className={`w-12 h-12 rounded-full flex items-center justify-center ${
-                      index === 0 ? 'bg-blautech-secondary' : 'bg-blautech-success'
+                      index === 0 ? 'bg-devsnap-secondary' : 'bg-devsnap-success'
                     }`}>
                       <span className="text-white text-xl">
                         {index === 0 ? '🚀' : '⚙️'}
                       </span>
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-blautech-primary mb-4">
+                      <h3 className="text-xl font-bold text-devsnap-primary mb-4">
                         {category.title}
                       </h3>
                       
@@ -46,7 +46,7 @@ const ModernizationSection: React.FC<ModernizationSectionProps> = ({ content }) 
                             className="flex items-center space-x-2 p-3 bg-white rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300"
                           >
                             <div className={`w-2 h-2 rounded-full ${
-                              index === 0 ? 'bg-blautech-secondary' : 'bg-blautech-success'
+                              index === 0 ? 'bg-devsnap-secondary' : 'bg-devsnap-success'
                             }`}></div>
                             <span className="text-sm font-medium text-gray-700">
                               {service}
@@ -64,7 +64,7 @@ const ModernizationSection: React.FC<ModernizationSectionProps> = ({ content }) 
             <div className="mt-8 fade-in-up stagger-3">
               <a 
                 href="#contacto" 
-                className="blautech-btn-primary"
+                className="devsnap-btn-primary"
               >
                 MODERNIZAR AHORA
               </a>
@@ -81,12 +81,12 @@ const ModernizationSection: React.FC<ModernizationSectionProps> = ({ content }) 
               />
               
               {/* Network Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-transparent via-blautech-secondary/10 to-blautech-success/20 rounded-lg">
+              <div className="absolute inset-0 bg-gradient-to-br from-transparent via-devsnap-secondary/10 to-devsnap-success/20 rounded-lg">
                 {/* Floating Connection Points */}
-                <div className="absolute top-1/4 left-1/4 w-4 h-4 bg-blautech-secondary rounded-full shadow-lg animate-pulse"></div>
-                <div className="absolute top-1/3 right-1/3 w-3 h-3 bg-blautech-success rounded-full shadow-lg animate-pulse" style={{ animationDelay: '1s' }}></div>
-                <div className="absolute bottom-1/3 left-1/3 w-5 h-5 bg-blautech-accent rounded-full shadow-lg animate-pulse" style={{ animationDelay: '2s' }}></div>
-                <div className="absolute bottom-1/4 right-1/4 w-4 h-4 bg-blautech-orange rounded-full shadow-lg animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+                <div className="absolute top-1/4 left-1/4 w-4 h-4 bg-devsnap-secondary rounded-full shadow-lg animate-pulse"></div>
+                <div className="absolute top-1/3 right-1/3 w-3 h-3 bg-devsnap-success rounded-full shadow-lg animate-pulse" style={{ animationDelay: '1s' }}></div>
+                <div className="absolute bottom-1/3 left-1/3 w-5 h-5 bg-devsnap-accent rounded-full shadow-lg animate-pulse" style={{ animationDelay: '2s' }}></div>
+                <div className="absolute bottom-1/4 right-1/4 w-4 h-4 bg-devsnap-orange rounded-full shadow-lg animate-pulse" style={{ animationDelay: '0.5s' }}></div>
                 
                 {/* Connecting Lines */}
                 <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 400 300">
@@ -107,7 +107,7 @@ const ModernizationSection: React.FC<ModernizationSectionProps> = ({ content }) 
               <div className="absolute top-4 right-4 w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center opacity-90">
                 <span className="text-2xl">☁️</span>
               </div>
-              <div className="absolute bottom-4 left-4 w-12 h-12 bg-blautech-success rounded-full shadow-lg flex items-center justify-center">
+              <div className="absolute bottom-4 left-4 w-12 h-12 bg-devsnap-success rounded-full shadow-lg flex items-center justify-center">
                 <span className="text-white text-xl">🔧</span>
               </div>
             </div>

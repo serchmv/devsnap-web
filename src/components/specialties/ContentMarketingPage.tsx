@@ -6,14 +6,14 @@ interface ContentMarketingPageProps {
 
 const ContentMarketingPage: React.FC<ContentMarketingPageProps> = ({ content }) => {
   return (
-    <section id="content-marketing" className="blautech-section bg-gradient-to-br from-green-50 via-white to-emerald-50">
-      <div className="blautech-container">
+    <section id="content-marketing" className="devsnap-section bg-gradient-to-br from-green-50 via-white to-emerald-50">
+      <div className="devsnap-container">
         {/* Header */}
         <div className="text-center mb-16 fade-in-up">
           <div className="inline-block p-4 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl mb-6">
             <span className="text-4xl text-white">📈</span>
           </div>
-          <h1 className="blautech-title text-blautech-primary mb-4">
+          <h1 className="devsnap-title text-devsnap-primary mb-4">
             Content Marketing & SEO
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -25,7 +25,7 @@ const ContentMarketingPage: React.FC<ContentMarketingPageProps> = ({ content }) 
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
           {/* Left Column - Services */}
           <div className="fade-in-up stagger-1">
-            <h2 className="text-2xl font-bold text-blautech-primary mb-8">
+            <h2 className="text-2xl font-bold text-devsnap-primary mb-8">
               Servicios de Marketing Digital
             </h2>
             
@@ -48,7 +48,7 @@ const ContentMarketingPage: React.FC<ContentMarketingPageProps> = ({ content }) 
                 }
               ].map((service, index) => (
                 <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-green-100">
-                  <h3 className="text-lg font-bold text-blautech-primary mb-3">{service.title}</h3>
+                  <h3 className="text-lg font-bold text-devsnap-primary mb-3">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {service.features.map((feature, featureIndex) => (
@@ -64,7 +64,7 @@ const ContentMarketingPage: React.FC<ContentMarketingPageProps> = ({ content }) 
 
           {/* Right Column - Results & Tools */}
           <div className="fade-in-up stagger-2">
-            <h2 className="text-2xl font-bold text-blautech-primary mb-8">
+            <h2 className="text-2xl font-bold text-devsnap-primary mb-8">
               Resultados Medibles
             </h2>
             
@@ -86,7 +86,7 @@ const ContentMarketingPage: React.FC<ContentMarketingPageProps> = ({ content }) 
 
             {/* Tools & Platforms */}
             <div className="bg-white rounded-xl p-6 shadow-lg border border-green-100">
-              <h3 className="text-lg font-bold text-blautech-primary mb-4">Herramientas Especializadas</h3>
+              <h3 className="text-lg font-bold text-devsnap-primary mb-4">Herramientas Especializadas</h3>
               <div className="grid grid-cols-2 gap-4">
                 {[
                   { name: "Google Analytics", icon: "📊" },
@@ -108,7 +108,7 @@ const ContentMarketingPage: React.FC<ContentMarketingPageProps> = ({ content }) 
 
         {/* Content Strategy Process */}
         <div className="fade-in-up stagger-3">
-          <h2 className="text-2xl font-bold text-blautech-primary text-center mb-12">
+          <h2 className="text-2xl font-bold text-devsnap-primary text-center mb-12">
             Metodología de Content Marketing
           </h2>
           
@@ -125,7 +125,7 @@ const ContentMarketingPage: React.FC<ContentMarketingPageProps> = ({ content }) 
                   {phase.step}
                 </div>
                 <div className="text-2xl mb-2">{phase.icon}</div>
-                <h3 className="text-lg font-bold text-blautech-primary mb-2">{phase.title}</h3>
+                <h3 className="text-lg font-bold text-devsnap-primary mb-2">{phase.title}</h3>
                 <p className="text-gray-600 text-sm">{phase.description}</p>
               </div>
             ))}
@@ -134,7 +134,7 @@ const ContentMarketingPage: React.FC<ContentMarketingPageProps> = ({ content }) 
 
         {/* Case Studies */}
         <div className="fade-in-up stagger-4">
-          <h2 className="text-2xl font-bold text-blautech-primary text-center mb-12">
+          <h2 className="text-2xl font-bold text-devsnap-primary text-center mb-12">
             Casos de Éxito en Marketing Digital
           </h2>
           
@@ -165,7 +165,7 @@ const ContentMarketingPage: React.FC<ContentMarketingPageProps> = ({ content }) 
                     {caseStudy.industry}
                   </span>
                 </div>
-                <h3 className="text-lg font-bold text-blautech-primary mb-3">{caseStudy.title}</h3>
+                <h3 className="text-lg font-bold text-devsnap-primary mb-3">{caseStudy.title}</h3>
                 <p className="text-gray-600 mb-4">{caseStudy.description}</p>
                 <div className="space-y-2">
                   {caseStudy.metrics.map((metric, metricIndex) => (
@@ -182,7 +182,7 @@ const ContentMarketingPage: React.FC<ContentMarketingPageProps> = ({ content }) 
 
         {/* Content Types */}
         <div className="fade-in-up stagger-5">
-          <h2 className="text-2xl font-bold text-blautech-primary text-center mb-12">
+          <h2 className="text-2xl font-bold text-devsnap-primary text-center mb-12">
             Tipos de Contenido que Creamos
           </h2>
           
@@ -199,7 +199,7 @@ const ContentMarketingPage: React.FC<ContentMarketingPageProps> = ({ content }) 
             ].map((contentType, index) => (
               <div key={index} className="bg-white rounded-xl p-4 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
                 <div className="text-3xl mb-3">{contentType.icon}</div>
-                <h3 className="text-lg font-bold text-blautech-primary mb-2">{contentType.type}</h3>
+                <h3 className="text-lg font-bold text-devsnap-primary mb-2">{contentType.type}</h3>
                 <p className="text-gray-600 text-sm">{contentType.description}</p>
               </div>
             ))}
