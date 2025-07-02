@@ -4,13 +4,8 @@ import Hero from './components/Hero';
 import DnaSection from './components/DnaSection';
 import ServicesSection from './components/ServicesSection';
 import DetailedServicesSection from './components/DetailedServicesSection';
-import ModernizationSection from './components/ModernizationSection';
-import AboutUsSection from './components/AboutUsSection';
-import DifferentiatorsSection from './components/DifferentiatorsSection';
 import ClientsSection from './components/ClientsSection';
-import JoinUsSection from './components/JoinUsSection';
 import TechCentersSection from './components/TechCentersSection';
-import NewsletterSection from './components/NewsletterSection';
 import Footer from './components/Footer';
 
 // Specialty Pages
@@ -131,13 +126,8 @@ function App() {
             <DnaSection content={content} />
             <ServicesSection content={content} />
             <DetailedServicesSection content={content} />
-            <ModernizationSection content={content} />
-            <AboutUsSection content={content} />
-            <DifferentiatorsSection content={content} />
             <ClientsSection content={content} />
-            <JoinUsSection content={content} />
             <TechCentersSection content={content} />
-            <NewsletterSection content={content} />
           </>
         ) : (
           <>

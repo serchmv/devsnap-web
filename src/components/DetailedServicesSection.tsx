@@ -1,40 +1,55 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { ArrowRight } from 'lucide-react';
+import TechLogo from './common/TechLogo';
 
 interface DetailedServicesSectionProps {
   content: any;
 }
 
 const DetailedServicesSection: React.FC<DetailedServicesSectionProps> = ({ content }) => {
-  const [activeService, setActiveService] = useState(0);
   const detailedServices = content.services.categories.find((cat: any) => cat.title === "Servicios Digitales")?.detailedServices;
 
   if (!detailedServices) return null;
+
+  // Mapeo de servicios a sus rutas correspondientes (basado en App.tsx)
+  const getServiceRoute = (serviceName: string): string => {
+    const routeMap: { [key: string]: string } = {
+      "Inteligencia Artificial & Machine Learning": "#ia-machine-learning",
+      "Automatización de Procesos (RPA)": "#automatizacion-rpa", 
+      "Migración a la Nube": "#cloud-migration",
+      "Content Marketing & SEO": "#content-marketing",
+      "Desarrollo de APIs & Microservicios": "#apis-microservicios",
+      "Ciberseguridad & DevSecOps": "#ciberseguridad"
+    };
+    return routeMap[serviceName] || "#";
+  };
+
+  const handleServiceClick = (serviceName: string) => {
+    const route = getServiceRoute(serviceName);
+    if (route !== "#") {
+      // Navegar a la página del servicio
+      window.location.hash = route;
+      // Scroll suave al top
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 100);
+    }
+  };
 
   return (
     <section className="devsnap-section bg-gradient-to-br from-gray-50 to-white">
       <div className="devsnap-container">
         {/* Header */}
         <div className="text-center mb-16 fade-in-up">
-          <h2 className="devsnap-title text-devsnap-primary mb-4">
+          <h2 className="devsnap-title text-devsnap-primary mb-4 font-encode-sans">
             Especialidades Tecnológicas
           </h2>
-          <p className="text-xl text-devsnap-secondary font-medium mb-6">
+          <p className="text-xl text-devsnap-secondary font-medium mb-6 font-encode-sans">
             Soluciones integrales para impulsar tu transformación digital
           </p>
-          <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
+          <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed font-encode-sans">
             Nuestro equipo de expertos desarrolla e implementa tecnologías de vanguardia adaptadas a las necesidades específicas de tu industria.
           </p>
-          
-          {/* More Info Button */}
-          <a 
-            href="#especialidades" 
-            className="inline-flex items-center space-x-2 bg-gradient-to-r from-devsnap-secondary to-devsnap-success text-white px-8 py-3 rounded-full font-medium hover:shadow-lg transform hover:scale-105 transition-all duration-300"
-          >
-            <span>Más información</span>
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </a>
         </div>
 
         {/* Services Grid */}
@@ -42,113 +57,48 @@ const DetailedServicesSection: React.FC<DetailedServicesSectionProps> = ({ conte
           {detailedServices.services.map((service: any, index: number) => (
             <div 
               key={index}
-              className={`group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-devsnap-secondary/20 fade-in-up stagger-${index + 1} flex flex-col h-full`}
-              onMouseEnter={() => setActiveService(index)}
+              className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-devsnap-secondary/20 fade-in-up flex flex-col h-full"
             >
-              {/* Background Gradient */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-500`}></div>
-              
-              {/* Service Icon */}
+              {/* Image Placeholder */}
               <div className="relative mb-6">
-                <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <span className="text-3xl text-white">{service.icon}</span>
+                <div className="w-full h-48 bg-gray-100 rounded-xl flex items-center justify-center group-hover:bg-gray-50 transition-colors duration-300">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-gray-200 rounded-lg mx-auto mb-2 flex items-center justify-center">
+                      <span className="text-2xl text-gray-400">📷</span>
+                    </div>
+                    <p className="text-sm text-gray-400 font-encode-sans">Imagen del servicio</p>
+                  </div>
                 </div>
-                
-                {/* Floating particles animation */}
-                <div className="absolute -top-2 -right-2 w-4 h-4 bg-devsnap-secondary rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-bounce transition-all duration-500 delay-100"></div>
-                <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-devsnap-success rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-bounce transition-all duration-500 delay-200"></div>
               </div>
 
               {/* Service Content */}
-              <div className="relative z-10 flex flex-col h-full">
-                <h3 className="text-xl font-bold text-devsnap-primary mb-4 group-hover:text-devsnap-secondary transition-colors duration-300">
+              <div className="flex flex-col h-full">
+                <h3 className="text-xl font-bold text-devsnap-primary mb-4 font-encode-sans">
                   {service.name}
                 </h3>
                 
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                <p className="text-gray-600 mb-6 leading-relaxed font-encode-sans flex-grow">
                   {service.description}
                 </p>
 
-                {/* Examples */}
-                <div className="space-y-2 mb-6 flex-grow">
-                  <h4 className="text-sm font-semibold text-devsnap-secondary mb-3 uppercase tracking-wide">
-                    Casos de Uso:
-                  </h4>
-                  <div className="space-y-2">
-                    {service.examples.map((example: string, exampleIndex: number) => (
-                      <div 
-                        key={exampleIndex}
-                        className="flex items-center space-x-3 group-hover:translate-x-1 transition-transform duration-300"
-                        style={{ transitionDelay: `${exampleIndex * 50}ms` }}
-                      >
-                        <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${service.color} opacity-70`}></div>
-                        <span className="text-sm text-gray-700 font-medium">{example}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
                 {/* Ver más button */}
                 <div className="mt-auto">
-                  <a 
-                    href={service.url}
-                    className={`inline-flex items-center space-x-2 w-full justify-center px-4 py-3 bg-gradient-to-r ${service.color} text-white rounded-xl font-medium hover:shadow-lg transform hover:scale-105 transition-all duration-300 group-hover:shadow-xl`}
+                  <button 
+                    onClick={() => handleServiceClick(service.name)}
+                    className="group inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-devsnap-secondary to-devsnap-success hover:from-devsnap-secondary/90 hover:to-devsnap-success/90 text-white rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-encode-sans"
                   >
-                    <span>Ver más detalles</span>
-                    <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </a>
+                    <span>Ver más</span>
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                  </button>
                 </div>
-              </div>
-
-              {/* Hover Effect Border */}
-              <div className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${service.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} 
-                style={{ background: `linear-gradient(135deg, transparent 0%, transparent 99%, var(--gradient-color) 100%)` }}>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Call to Action */}
-        <div className="text-center fade-in-up stagger-7">
-          <div className="bg-gradient-to-r from-devsnap-primary to-devsnap-secondary rounded-2xl p-8 text-white relative overflow-hidden">
-            {/* Background Pattern */}
-            <div className="absolute inset-0 opacity-10">
-              <div className="absolute top-4 left-4 w-32 h-32 border border-white rounded-full"></div>
-              <div className="absolute bottom-4 right-4 w-24 h-24 border border-white rounded-full"></div>
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 border border-white rounded-full"></div>
-            </div>
-            
-            <div className="relative z-10">
-              <h3 className="text-3xl font-bold mb-4">
-                ¿Listo para Transformar tu Empresa?
-              </h3>
-              <p className="text-xl mb-8 text-white/90">
-                Nuestros Solution Makers están listos para diseñar la estrategia tecnológica perfecta para tu organización.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a 
-                  href="#contacto" 
-                  className="bg-white text-devsnap-primary px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-colors duration-300 transform hover:scale-105"
-                >
-                  SOLICITAR CONSULTORÍA GRATUITA
-                </a>
-                <a 
-                  href="#casos-exito" 
-                  className="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-devsnap-primary transition-all duration-300"
-                >
-                  VER CASOS DE ÉXITO
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Technology Badges */}
-        <div className="mt-16 text-center fade-in-up stagger-8">
-          <h4 className="text-lg font-semibold text-devsnap-primary mb-6 uppercase tracking-wide">
+        <div className="mt-16 text-center fade-in-up">
+          <h4 className="text-lg font-semibold text-devsnap-primary mb-6 uppercase tracking-wide font-encode-sans">
             Tecnologías y Plataformas Especializadas
           </h4>
           <div className="flex flex-wrap justify-center gap-6">
@@ -213,28 +163,19 @@ const DetailedServicesSection: React.FC<DetailedServicesSectionProps> = ({ conte
                 {/* Logo Container */}
                 <div className="relative flex flex-col items-center space-y-3">
                   <div className="w-16 h-16 bg-gray-50 rounded-xl flex items-center justify-center p-2 group-hover:bg-white transition-colors duration-300">
-                    <img 
-                      src={tech.logo} 
-                      alt={tech.name}
-                      className="w-full h-full object-contain filter group-hover:drop-shadow-md transition-all duration-300"
-                      onError={(e) => {
-                        // Fallback si la imagen no carga
-                        const target = e.target as HTMLImageElement;
-                        target.style.display = 'none';
-                        const parent = target.parentElement;
-                        if (parent) {
-                          parent.innerHTML = `<span class="text-xl font-bold text-gray-600">${tech.shortName}</span>`;
-                        }
-                      }}
+                    <TechLogo
+                      tech={tech}
+                      mobileWidth={64}
+                      desktopWidth={128}
                     />
                   </div>
                   
                   {/* Tech Name */}
                   <div className="text-center">
-                    <p className="text-sm font-bold text-devsnap-primary group-hover:text-devsnap-secondary transition-colors duration-300">
+                    <p className="text-sm font-bold text-devsnap-primary group-hover:text-devsnap-secondary transition-colors duration-300 font-encode-sans">
                       {tech.shortName}
                     </p>
-                    <p className="text-xs text-gray-500 group-hover:text-gray-700 transition-colors duration-300">
+                    <p className="text-xs text-gray-500 group-hover:text-gray-700 transition-colors duration-300 font-encode-sans">
                       {tech.name}
                     </p>
                   </div>
@@ -248,7 +189,7 @@ const DetailedServicesSection: React.FC<DetailedServicesSectionProps> = ({ conte
           
           {/* Additional Info */}
           <div className="mt-8 text-center">
-            <p className="text-gray-600 text-sm max-w-2xl mx-auto">
+            <p className="text-gray-600 text-sm max-w-2xl mx-auto font-encode-sans">
               Trabajamos con las tecnologías más avanzadas del mercado para garantizar soluciones robustas, escalables y de vanguardia.
             </p>
           </div>

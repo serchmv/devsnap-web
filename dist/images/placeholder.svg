@@ -1,0 +1,8 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#F3F4F6"/>
+  <circle cx="200" cy="130" r="24" fill="#D1D5DB"/>
+  <path d="M180 154h40v2h-40v-2z" fill="#D1D5DB"/>
+  <path d="M190 160h20v2h-20v-2z" fill="#E5E7EB"/>
+  <rect x="160" y="180" width="80" height="40" rx="8" fill="#E5E7EB"/>
+  <text x="200" y="205" text-anchor="middle" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="14">Cargando...</text>
+</svg>
