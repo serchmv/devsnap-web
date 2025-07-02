@@ -16,7 +16,7 @@ const DnaSection: React.FC<DnaSectionProps> = ({ content }) => {
             </h2>
             
             <div className="space-y-6">
-              <p className="text-lg text-black-700 leading-relaxed">
+              <p className="text-lg text-black-700 leading-relaxed text-black">
                 Somos Solution Makers especializados en simplificar la adopción de tecnología 
                 para empresas que buscan transformación digital efectiva.
               </p>

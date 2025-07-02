@@ -33,6 +33,11 @@ module.exports = {
 				'devsnap-white': '#FFFFFF',
 				'devsnap-gray': '#F8F9FA',
 				'devsnap-dark': '#1a1a1a',
+				//Colores adicionales
+				brandBlue: '#48cae4',
+        		brandPink: '#ec4899',
+        		brandGreen: '#10b981',
+				brandBlueFuerte: '#03045e',
 				
 				// Configuración del theme system
 				primary: {

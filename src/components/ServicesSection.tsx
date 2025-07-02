@@ -6,97 +6,91 @@ interface ServicesSectionProps {
 
 const ServicesSection: React.FC<ServicesSectionProps> = ({ content }) => {
   return (
-    <section className="relative devsnap-section font-encode-sans bg-gradient-to-br from-devsnap-primary via-devsnap-accent to-devsnap-success bg-[url('/images/fondosnap_1.svg')] bg-no-repeat bg-cover bg-center bg-blend-overlay">
-      {/* Capa semitransparente para difuminar el fondo, opacidad baja */}
-      <div className="absolute inset-0 bg-white/10 z-0 pointer-events-none"></div>
+    <section className="relative devsnap-section bg-[url('/images/fondosnap_1.svg')] bg-no-repeat bg-cover bg-center">
+      {/* Overlay sutil para el SVG */}
+<div className="absolute inset-0 backdrop-blur-[3px] z-0"></div>      
       <div className="relative z-10">
         {/* Header */}
         <div className="text-center mb-16 fade-in-up">
-          <h2 className="text-2xl md:text-3xl text-white font-encode-sans mb-6">
-            {content.services.title}
-          </h2>
+          <p className="text-3xl md:text-3xl font-bold mb-4">
+            <span className="text-white font-encode-sans">"Soluciones tecnológicas</span>
+            <span className="text-black font-encode-sans"> avanzadas diseñadas para impulsar tu crecimiento"</span>
+          </p>
         </div>
         
         {/* Service Cards */}
-        <div className="grid lg:grid-cols-2 gap-10 mb-16">
+        <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {content.services.categories.map((category: any, index: number) => (
             <div 
               key={index}
-              className={`devsnap-card fade-in-up stagger-${index + 1} shadow-xl rounded-2xl border border-white/30 bg-white/80 backdrop-blur transition-transform duration-300 hover:scale-105 hover:shadow-2xl p-6 flex flex-col gap-6`}
+              className={`group relative overflow-hidden rounded-3xl transition-all duration-500 hover:scale-105 hover:shadow-2xl fade-in-up stagger-${index + 1}`}
             >
-              {/* Service Image */}
-              <div className="relative mb-4 rounded-xl overflow-hidden">
-                <img 
-                  src={category.image} 
-                  alt={category.title}
-                  className="w-full h-44 object-cover"
-                />
-                {/* Hexagonal Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-r from-devsnap-secondary/70 to-devsnap-success/70 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-3 mx-auto shadow-md">
-                      <span className="text-2xl">{category.icon}</span>
-                    </div>
-                    <div className="grid grid-cols-3 gap-1">
-                      {[...Array(6)].map((_, i) => (
-                        <div 
-                          key={i} 
-                          className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center"
-                          style={{ animationDelay: `${i * 0.1}s` }}
-                        >
-                          <div className="w-3 h-3 bg-white rounded-full opacity-60"></div>
-                        </div>
-                      ))}
+              {/* Video Background */}
+              <div className="relative h-80 overflow-hidden rounded-3xl">
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  poster={category.image}
+                >
+                  <source src={`/videos/${index === 0 ? 'coding.mp4' : 'junta.mp4'}`} type="video/mp4" />
+                  {/* Tu navegador no soporta el video. */}
+                </video>
+                
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-devsnap-primary/80 via-devsnap-primary/40 to-transparent"></div>
+                
+                
+                
+                {/* Content Overlay */}
+                <div className="absolute bottom-0 left-0 right-0 p-8">
+                  <div className="flex items-start space-x-4">
+                   
+                    <div className="flex-1 space-x-0">
+                      <h3 className="text-xl font-bold text-white  font-encode-sans">
+                        {category.title}
+                      </h3>
+                      <p className="text-black font-bold leading-relaxed font-encode-sans">
+                        {category.description}
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
               
-              {/* Service Content */}
-              <div className="flex items-start space-x-4">
-                <div className="w-10 h-10 bg-gradient-to-r from-devsnap-secondary to-devsnap-success rounded-full flex items-center justify-center flex-shrink-0 shadow-md">
-                  <span className="text-white text-lg">{category.icon}</span>
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-lg font-bold text-devsnap-primary mb-2 font-encode-sans">
-                    {category.title}
-                  </h3>
-                  <p className="text-gray-700 mb-3 leading-relaxed font-encode-sans">
-                    {category.description}
-                  </p>
-                  
-                  {/* Service Tags */}
-                  <div className="flex flex-wrap gap-2">
-                    {category.services.map((service: string, serviceIndex: number) => (
-                      <span 
-                        key={serviceIndex}
-                        className="px-3 py-1 bg-gradient-to-r from-devsnap-secondary/10 to-devsnap-success/10 text-devsnap-secondary text-sm rounded-full border border-devsnap-secondary/20 font-medium font-encode-sans hover:bg-devsnap-secondary/20 transition-colors"
-                      >
-                        {service}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
+             
             </div>
           ))}
         </div>
         
         {/* Bottom Section */}
         <div className="text-center fade-in-up stagger-3">
-          <div className="bg-white/10 rounded-lg p-8 backdrop-blur-sm">
-            <h3 className="text-2xl font-bold text-white mb-4 font-encode-sans">
-              {content.services.subtitle}
+          <div className="bg-white/80 backdrop-blur-xl rounded-3xl p-10 border border-white/50 shadow-xl max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold text-devsnap-primary mb-4">
+              TRANSFORMACIÓN DE NEGOCIOS
             </h3>
-            <p className="text-white/90 text-lg mb-6 font-encode-sans">
-              {content.services.description}
+            <p className="text-gray-700 text-lg mb-8 leading-relaxed">
+              Implementamos tecnologías avanzadas que revolucionan la forma en que operates, 
+              optimizando procesos y creando nuevas oportunidades de crecimiento.
             </p>
-            <a 
-              href="#contacto" 
-              className="devsnap-btn-secondary bg-transparent border-white text-white hover:bg-white hover:text-devsnap-primary font-encode-sans"
-            >
-              CONOCER MÁS
-            </a>
+            
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="#contacto" 
+                className="px-8 py-4 bg-gradient-to-r from-devsnap-secondary to-devsnap-success text-white rounded-2xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
+              >
+                INICIAR TRANSFORMACIÓN
+              </a>
+              <a 
+                href="#servicios" 
+                className="px-8 py-4 border-2 border-devsnap-primary text-devsnap-primary rounded-2xl font-semibold transition-all duration-300 hover:bg-devsnap-primary hover:text-white"
+              >
+                VER TODOS LOS SERVICIOS
+              </a>
+            </div>
           </div>
         </div>
       </div>
