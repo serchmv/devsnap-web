@@ -17,7 +17,7 @@ const Hero: React.FC<HeroProps> = ({ content }) => {
           className="w-full h-full object-cover"
           style={{ filter: 'blur(3px)' }}
         >
-          <source src="\public\images\videofondo.mp4" type="video/mp4" />
+          <source src="/videos/videofondo.mp4" type="video/mp4" />
           {/* Fallback image si el video no carga */}
           <div 
             className="w-full h-full bg-cover bg-center"
@@ -36,7 +36,7 @@ const Hero: React.FC<HeroProps> = ({ content }) => {
         {/* Logo */}
         <div className="flex items-center justify-center mb-8 fade-in-up">
           <img 
-            src="\public\images\logo.png" 
+            src="/images/logo.png" 
             alt="DevSnap Logo" 
             className="h-20 w-auto filter drop-shadow-lg"
           />

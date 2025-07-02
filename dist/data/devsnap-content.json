@@ -8,7 +8,8 @@
       "accent": "#E91E63",
       "success": "#20B2AA",
       "white": "#FFFFFF",
-      "gray": "#F8F9FA"
+      "gray": "#F8F9FA",
+      "black": "#000000"
     }
   },
   "navigation": {
@@ -19,19 +20,19 @@
       { "label": "ENG", "href": "#" }
     ],
     "contact": {
-      "whatsapp": "+52 55 1234 5678",
-      "phone": "+52 55 8765 4321"
+      "whatsapp": "+525578470070",
+      "phone": "+525578470070"
     }
   },
   "hero": {
-    "title": "SIMPLIFICAMOS LA ADOPCIÓN DE LA TECNOLOGÍA CREANDO SOLUCIONES EMPRESARIALES ÁGILES.",
+    "title": "Soluciones integrales para impulsar tu transformación digital",
     "backgroundImage": "/images/hero-cityscape.jpg"
   },
   "dna": {
     "title": "Nuestro ADN como Solutions Makers",
     "image": "/images/dna-professional.jpg",
     "features": [
-  
+      
       "Transformación de legacies",
       "IA y analítica",
       "BPA",
@@ -49,7 +50,7 @@
         "image": "/images/server-room.jpg",
         "icon": "💻",
         "services": [
-          
+        
           "Transformación de legacies",
           "IA y analítica",
           "BPA",

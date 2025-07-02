@@ -9,6 +9,34 @@ const Header: React.FC<HeaderProps> = ({ content }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  // Información de contacto DevSnap
+  const contactInfo = {
+    telefono: '+525578470070',
+    whatsapp: '+525578470070'
+  };
+
+  // Función para WhatsApp con mensaje especializado DevSnap
+  const handleWhatsApp = () => {
+    const mensaje = `¡Hola! Me gustaría obtener información sobre los servicios de DevSnap.
+
+💼 *Servicios de interés:*
+🌐 Páginas Web
+🤖 Inteligencia Artificial
+⚙️ Automatización de Procesos (RPA)
+☁️ Migración a la Nube
+📈 Content Marketing & SEO
+🔗 APIs & Microservicios
+🛡️ Ciberseguridad
+
+*¿Podrían brindarme más información?*
+
+Gracias por su atención.`;
+
+    const numeroLimpio = contactInfo.whatsapp.replace(/[^0-9]/g, '');
+    const whatsappUrl = `https://wa.me/${numeroLimpio}?text=${encodeURIComponent(mensaje)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -29,7 +57,7 @@ const Header: React.FC<HeaderProps> = ({ content }) => {
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <img 
-              src="\public\images\DS.png" 
+              src="/images/DS.png" 
               alt="DevSnap Logo" 
               className="h-8 w-auto"
             />
@@ -57,10 +85,8 @@ const Header: React.FC<HeaderProps> = ({ content }) => {
             {/* Contact Icons Only */}
             <div className="flex items-center space-x-3 ml-6 border-l border-gray-300 pl-6">
               {/* WhatsApp Icon */}
-              <a
-                href={`https://wa.me/${content.navigation.contact.whatsapp.replace(/\D/g, '')}`}
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                onClick={handleWhatsApp}
                 className={`p-3 rounded-full transition-all duration-300 hover:scale-110 group ${
                   isScrolled 
                     ? 'bg-green-500 text-white hover:bg-green-600' 
@@ -69,11 +95,11 @@ const Header: React.FC<HeaderProps> = ({ content }) => {
                 title="WhatsApp"
               >
                 <MessageCircle size={20} />
-              </a>
+              </button>
 
               {/* Phone Icon */}
               <a
-                href={`tel:${content.navigation.contact.phone}`}
+                href={`tel:${contactInfo.telefono}`}
                 className={`p-3 rounded-full border-2 transition-all duration-300 hover:scale-110 group ${
                   isScrolled 
                     ? 'border-devsnap-primary text-devsnap-primary hover:bg-devsnap-primary hover:text-white' 
@@ -118,19 +144,19 @@ const Header: React.FC<HeaderProps> = ({ content }) => {
               {/* Contact Buttons Mobile */}
               <div className="px-4 py-2 border-t border-gray-200 mt-4 pt-4">
                 <div className="flex space-x-3 justify-center">
-                  <a
-                    href={`https://wa.me/${content.navigation.contact.whatsapp.replace(/\D/g, '')}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <button
+                    onClick={() => {
+                      handleWhatsApp();
+                      setIsMobileMenuOpen(false);
+                    }}
                     className="flex items-center justify-center w-14 h-14 bg-green-500 text-white rounded-full hover:bg-green-600 transition-colors duration-300"
-                    onClick={() => setIsMobileMenuOpen(false)}
                     title="WhatsApp"
                   >
                     <MessageCircle size={24} />
-                  </a>
+                  </button>
                   
                   <a
-                    href={`tel:${content.navigation.contact.phone}`}
+                    href={`tel:${contactInfo.telefono}`}
                     className="flex items-center justify-center w-14 h-14 border-2 border-devsnap-primary text-devsnap-primary rounded-full hover:bg-devsnap-primary hover:text-white transition-all duration-300"
                     onClick={() => setIsMobileMenuOpen(false)}
                     title="Llamar"
