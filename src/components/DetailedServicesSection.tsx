@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
-import TechLogo from './common/TechLogo';
+import OptimizedImage from './common/OptimizedImage';
 
 interface DetailedServicesSectionProps {
   content: any;
@@ -106,50 +106,66 @@ const DetailedServicesSection: React.FC<DetailedServicesSectionProps> = ({ conte
               { 
                 name: "Amazon Web Services", 
                 logo: "/images/tech-logos/aws-logo.png",
-                color: "from-orange-400 to-orange-600",
-                shortName: "AWS"
+                color: "from-orange-500 to-orange-600",
+                bgColor: "bg-orange-50 group-hover:bg-orange-100",
+                shortName: "AWS",
+                icon: "☁️"
               },
               { 
                 name: "Microsoft Azure", 
                 logo: "/images/tech-logos/azure-logo.png",
-                color: "from-blue-400 to-blue-600",
-                shortName: "Azure"
+                color: "from-blue-500 to-blue-600",
+                bgColor: "bg-blue-50 group-hover:bg-blue-100",
+                shortName: "Azure",
+                icon: "⚡"
               },
               { 
                 name: "React", 
                 logo: "/images/tech-logos/react-logo.jpg",
-                color: "from-cyan-400 to-cyan-600",
-                shortName: "React"
+                color: "from-cyan-500 to-cyan-600",
+                bgColor: "bg-cyan-50 group-hover:bg-cyan-100",
+                shortName: "React",
+                icon: "⚛️"
               },
               { 
                 name: "Python", 
                 logo: "/images/tech-logos/python-logo.png",
-                color: "from-green-400 to-green-600",
-                shortName: "Python"
+                color: "from-yellow-500 to-green-600",
+                bgColor: "bg-yellow-50 group-hover:bg-yellow-100",
+                shortName: "Python",
+                icon: "🐍"
               },
               { 
                 name: "TensorFlow", 
                 logo: "/images/tech-logos/tensorflow-logo.png",
-                color: "from-purple-400 to-purple-600",
-                shortName: "TensorFlow"
+                color: "from-orange-500 to-red-600",
+                bgColor: "bg-orange-50 group-hover:bg-orange-100",
+                shortName: "TensorFlow",
+                icon: "🧠"
               },
               { 
                 name: "Docker", 
                 logo: "/images/tech-logos/docker-logo.png",
-                color: "from-blue-500 to-indigo-600",
-                shortName: "Docker"
+                color: "from-blue-600 to-blue-700",
+                bgColor: "bg-blue-50 group-hover:bg-blue-100",
+                shortName: "Docker",
+                icon: "🐳"
               },
               { 
                 name: "Kubernetes", 
                 logo: "/images/tech-logos/kubernetes-logo.png",
-                color: "from-indigo-400 to-indigo-600",
-                shortName: "Kubernetes"
+                color: "from-blue-600 to-indigo-700",
+                bgColor: "bg-blue-50 group-hover:bg-blue-100",
+                shortName: "K8s",
+                icon: "⎈"
               },
               { 
                 name: "MongoDB", 
                 logo: "/images/tech-logos/mongodb-logo.png",
-                color: "from-green-500 to-green-700",
-                shortName: "MongoDB"
+                color: "from-green-600 to-green-700",
+                bgColor: "bg-green-50 group-hover:bg-green-100",
+                shortName: "MongoDB",
+                icon: "🍃"
               }
             ].map((tech, index) => (
               <div 
@@ -162,12 +178,22 @@ const DetailedServicesSection: React.FC<DetailedServicesSectionProps> = ({ conte
                 
                 {/* Logo Container */}
                 <div className="relative flex flex-col items-center space-y-3">
-                  <div className="w-16 h-16 bg-gray-50 rounded-xl flex items-center justify-center p-2 group-hover:bg-white transition-colors duration-300">
-                    <TechLogo
-                      tech={tech}
-                      mobileWidth={64}
-                      desktopWidth={128}
-                    />
+                  <div className={`w-20 h-20 ${tech.bgColor} rounded-2xl flex items-center justify-center p-3 group-hover:shadow-lg transition-all duration-300 border-2 border-transparent group-hover:border-white`}>
+                    <div className={`w-12 h-12 bg-gradient-to-br ${tech.color} rounded-xl flex items-center justify-center shadow-sm group-hover:shadow-md transition-all duration-300`}>
+                      <img
+                        src={tech.logo}
+                        alt={tech.name}
+                        className="w-8 h-8 object-contain drop-shadow-sm"
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement;
+                          target.style.display = 'none';
+                          const parent = target.parentElement;
+                          if (parent) {
+                            parent.innerHTML = `<span class="text-white text-xl">${tech.icon}</span>`;
+                          }
+                        }}
+                      />
+                    </div>
                   </div>
                   
                   {/* Tech Name */}

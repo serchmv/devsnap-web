@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Phone, MessageCircle, Home, Settings, Users, Mail, Briefcase, ChevronRight, Send } from 'lucide-react';
-import OptimizedImage from './common/OptimizedImage';
 
 interface HeaderProps {
   content: any;
@@ -116,13 +115,10 @@ Gracias por su atención.`;
         <nav className="flex items-center justify-between py-4">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <OptimizedImage
-              src="/images/DS.png"
-              alt="DevSnap Logo"
+            <img 
+              src="/images/DS.png" 
+              alt="DevSnap Logo" 
               className="h-8 w-auto"
-              mobileWidth={64}
-              desktopWidth={128}
-              quality={95}
             />
           </div>
 
@@ -219,13 +215,10 @@ Gracias por su atención.`;
               {/* Logo SVG Centrado */}
               <div className="flex-1 flex justify-center">
                 <div className="w-20 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
-                  <OptimizedImage
+                  <img
                     src="/images/DS.png"
                     alt="DevSnap Logo"
                     className="h-10 w-auto"
-                    mobileWidth={64}
-                    desktopWidth={128}
-                    quality={95}
                   />
                 </div>
               </div>

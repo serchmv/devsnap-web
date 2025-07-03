@@ -1,6 +1,5 @@
 import React from 'react';
 import { Facebook, Linkedin, Youtube, Instagram } from 'lucide-react';
-import OptimizedImage from './common/OptimizedImage';
 
 interface FooterProps {
   content: any;
@@ -22,13 +21,10 @@ const Footer: React.FC<FooterProps> = ({ content }) => {
           {/* Logo & Company */}
           <div className="text-center md:text-left">
             <div className="flex items-center justify-center md:justify-start space-x-3 mb-3">
-              <OptimizedImage
-                src="/images/DS.png"
-                alt="DevSnap Logo"
+              <img 
+                src="/images/DS.png" 
+                alt="DevSnap Logo" 
                 className="h-8 w-auto"
-                mobileWidth={64}
-                desktopWidth={128}
-                quality={95}
               />
               <div className="flex flex-col">
                 <span className="text-xl font-bold font-encode-sans">DEVSNAP</span>
