@@ -14,10 +14,10 @@
   },
   "navigation": {
     "main": [
-      { "label": "INICIO", "href": "#inicio" },
-      { "label": "CONTÁCTANOS", "href": "#contacto" },
-      { "label": "CARRERAS", "href": "#carreras" },
-      { "label": "ENG", "href": "#" }
+      { "label": "INICIO", "href": "#" },
+      { "label": "NOSOTROS", "href": "#nosotros" },
+      { "label": "SERVICIOS", "href": "#servicios" },
+      { "label": "ESPECIALIDADES", "href": "#especialidades" }
     ],
     "contact": {
       "whatsapp": "+525578470070",

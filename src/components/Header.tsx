@@ -126,18 +126,34 @@ Gracias por su atención.`;
           <div className="hidden md:flex items-center space-x-6 font-encode-sans">
             {/* Menu Items - Sin ENG */}
             <div className="flex items-center space-x-6 font-encode-sans">
-              {content.navigation.main
-                .filter((item: any) => item.label !== 'ENG')
-                .map((item: any, index: number) => (
-                <a
-  key={index}
-  href={item.href}
-  className={`font-medium font-encode-sans transition-colors duration-300 hover:text-devsnap-secondary ${
-    isScrolled ? 'text-black' : 'text-white'
-  }`}
->
-  {item.label}
-</a>
+              {content.navigation.main.map((item: any, index: number) => (
+                <button
+                  key={index}
+                  onClick={() => {
+                    if (item.href === '#') {
+                      // Scroll to top for inicio
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    } else {
+                      // Use direct ID targeting for other sections
+                      const targetId = item.href.replace('#', '');
+                      const element = document.getElementById(targetId);
+                      if (element) {
+                        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                      } else if (targetId === 'contacto') {
+                        // Fallback for footer
+                        const footer = document.querySelector('footer');
+                        if (footer) {
+                          footer.scrollIntoView({ behavior: 'smooth' });
+                        }
+                      }
+                    }
+                  }}
+                  className={`font-medium font-encode-sans transition-colors duration-300 hover:text-devsnap-secondary ${
+                    isScrolled ? 'text-black' : 'text-white'
+                  }`}
+                >
+                  {item.label}
+                </button>
               ))}
             </div>
 
@@ -174,8 +190,8 @@ Gracias por su atención.`;
                 onClick={() => setIsContactPopupOpen(true)}
                 className={`p-3 rounded-full transition-all duration-300 hover:scale-110 group ${
                   isScrolled 
-                    ? 'bg-gray-500 text-white hover:bg-gray-600' 
-                    : 'bg-gray-500 text-white hover:bg-gray-600'
+                    ? 'bg-gradient-to-r from-devsnap-accent to-pink-500 text-white hover:from-devsnap-accent/90 hover:to-pink-500/90 shadow-lg hover:shadow-xl' 
+                    : 'bg-gradient-to-r from-devsnap-accent to-pink-500 text-white hover:from-devsnap-accent/90 hover:to-pink-500/90 shadow-lg hover:shadow-xl'
                 }`}
                 title="Contacto"
               >
@@ -198,16 +214,37 @@ Gracias por su atención.`;
 
         {/* Mobile Menu Overlay */}
         {isMobileMenuOpen && (
-          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 md:hidden" 
-               onClick={() => setIsMobileMenuOpen(false)} />
+          <div 
+            className="fixed top-0 left-0 w-full h-full md:hidden" 
+            style={{ 
+              zIndex: 99998,
+              position: 'fixed',
+              margin: 0,
+              background: 'rgba(0, 0, 0, 0.7)',
+              backdropFilter: 'blur(4px)',
+              WebkitBackdropFilter: 'blur(4px)'
+            }}
+            onClick={() => setIsMobileMenuOpen(false)} 
+          />
         )}
 
         {/* Mobile Menu */}
         <div 
           data-mobile-menu
-          className={`fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white shadow-2xl z-50 transform transition-transform duration-300 ease-out md:hidden ${
+          className={`fixed top-0 right-0 h-full w-80 max-w-[85vw] transform transition-transform duration-300 ease-out md:hidden ${
             isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
+          style={{ 
+            zIndex: 99999,
+            position: 'fixed',
+            background: 'linear-gradient(135deg, #2C3E50 0%, #6C63FF 25%, #20B2AA 50%, #E91E63 75%, #2C3E50 100%) !important',
+            backgroundImage: 'linear-gradient(135deg, #2C3E50 0%, #6C63FF 25%, #20B2AA 50%, #E91E63 75%, #2C3E50 100%) !important',
+            backgroundColor: '#2C3E50 !important',
+            borderLeft: '6px solid #FF9500 !important',
+            boxShadow: '-15px 0 40px rgba(0,0,0,0.6), inset 1px 0 0 rgba(255,255,255,0.2) !important',
+            backdropFilter: 'blur(10px)',
+            WebkitBackdropFilter: 'blur(10px)'
+          }}
         >
           {/* Menu Header */}
           <div className="relative bg-gradient-to-br from-devsnap-primary via-devsnap-secondary to-devsnap-success p-4 text-white">
@@ -238,11 +275,10 @@ Gracias por su atención.`;
             {/* Navigation Items */}
             <nav className="space-y-2 p-4">
               {[
-                { label: 'INICIO', href: '#inicio', icon: Home },
-                { label: 'SERVICIOS', href: '#servicios', icon: Settings },
+                { label: 'INICIO', href: '#', icon: Home },
                 { label: 'NOSOTROS', href: '#nosotros', icon: Users },
-                { label: 'CONTÁCTANOS', href: '#contacto', icon: Mail },
-                { label: 'CARRERAS', href: '#carreras', icon: Briefcase }
+                { label: 'SERVICIOS', href: '#servicios', icon: Settings },
+                { label: 'ESPECIALIDADES', href: '#especialidades', icon: Briefcase }
               ].map((item, index) => {
                 const IconComponent = item.icon;
                 return (
@@ -250,9 +286,23 @@ Gracias por su atención.`;
                     key={index}
                     onClick={() => {
                       setIsMobileMenuOpen(false);
-                      const element = document.getElementById(item.href.replace('#', ''));
-                      if (element) {
-                        element.scrollIntoView({ behavior: 'smooth' });
+                      
+                      if (item.href === '#') {
+                        // Scroll to top for inicio
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                      } else {
+                        // Use direct ID targeting for other sections
+                        const targetId = item.href.replace('#', '');
+                        const element = document.getElementById(targetId);
+                        if (element) {
+                          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        } else if (targetId === 'contacto') {
+                          // Fallback for footer
+                          const footer = document.querySelector('footer');
+                          if (footer) {
+                            footer.scrollIntoView({ behavior: 'smooth' });
+                          }
+                        }
                       }
                     }}
                     className="group flex items-center space-x-3 p-3 rounded-xl bg-gray-50 hover:bg-gradient-to-r hover:from-devsnap-secondary/10 hover:to-devsnap-success/10 hover:shadow-md transition-all duration-300 w-full text-left"
@@ -304,7 +354,7 @@ Gracias por su atención.`;
                     setIsContactPopupOpen(true);
                     setIsMobileMenuOpen(false);
                   }}
-                  className="w-14 h-14 bg-gradient-to-r from-gray-500 to-gray-600 text-white rounded-full flex items-center justify-center hover:shadow-lg transition-all duration-300 transform hover:scale-110"
+                  className="w-14 h-14 bg-gradient-to-r from-devsnap-accent to-pink-500 text-white rounded-full flex items-center justify-center hover:shadow-lg transition-all duration-300 transform hover:scale-110"
                   title="Contacto"
                 >
                   <Mail size={20} />
@@ -324,76 +374,129 @@ Gracias por su atención.`;
           </div>
         </div>
 
-        {/* Contact Popup */}
+        {/* Contact Popup - Mejorado */}
         {isContactPopupOpen && (
-          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-            <div className="bg-white rounded-2xl p-6 w-full max-w-md mx-auto shadow-2xl">
-              {/* Header */}
-              <div className="flex items-center justify-between mb-6">
-                <h3 className="text-xl font-bold text-devsnap-primary font-encode-sans">Contacto Rápido</h3>
-                <button
-                  onClick={() => setIsContactPopupOpen(false)}
-                  className="w-8 h-8 bg-gray-100 hover:bg-gray-200 rounded-lg flex items-center justify-center transition-colors duration-300"
-                >
-                  <X size={16} />
-                </button>
+          <div 
+            className="fixed top-0 left-0 w-full h-full bg-black/60 backdrop-blur-md flex items-center justify-center p-4"
+            style={{ 
+              zIndex: 999999,
+              position: 'fixed',
+              margin: 0,
+              padding: '16px'
+            }}
+            onClick={(e) => {
+              if (e.target === e.currentTarget) {
+                setIsContactPopupOpen(false);
+              }
+            }}
+          >
+            <div 
+              className="bg-white rounded-3xl w-full max-w-lg shadow-2xl overflow-hidden animate-scale-up"
+              style={{ 
+                zIndex: 999999,
+                position: 'relative',
+                margin: 'auto'
+              }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Header con gradiente */}
+              <div className="bg-gradient-to-r from-devsnap-primary via-devsnap-secondary to-devsnap-success p-6 text-white relative">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                      <Mail className="h-6 w-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold font-encode-sans">¡Conectemos!</h3>
+                      <p className="text-sm text-white/90 font-encode-sans">Tu proyecto digital te espera</p>
+                    </div>
+                  </div>
+                  <button
+                    onClick={() => setIsContactPopupOpen(false)}
+                    className="w-10 h-10 bg-white/20 backdrop-blur-sm hover:bg-white/30 rounded-full flex items-center justify-center transition-all duration-300 group"
+                  >
+                    <X size={18} className="text-white group-hover:scale-110 transition-transform duration-300" />
+                  </button>
+                </div>
               </div>
 
-              {/* Form */}
-              <form onSubmit={handleContactSubmit} className="space-y-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2 font-encode-sans">
-                    Nombre completo
-                  </label>
-                  <input
-                    type="text"
-                    name="nombre"
-                    value={formData.nombre}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-devsnap-secondary focus:border-transparent font-encode-sans"
-                    placeholder="Ingresa tu nombre"
-                  />
+              {/* Contenido del formulario */}
+              <div className="p-6">
+                {/* Mensaje de bienvenida */}
+                <div className="mb-6 text-center">
+                  <p className="text-gray-600 font-encode-sans leading-relaxed">
+                    <strong className="text-devsnap-primary">¡Hola!</strong> Nos especializamos en transformación digital. 
+                    Déjanos tus datos y te contactaremos en <strong className="text-devsnap-success">menos de 30 minutos</strong>.
+                  </p>
                 </div>
 
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2 font-encode-sans">
-                    Correo electrónico
-                  </label>
-                  <input
-                    type="email"
-                    name="correo"
-                    value={formData.correo}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-devsnap-secondary focus:border-transparent font-encode-sans"
-                    placeholder="tu@email.com"
-                  />
-                </div>
+                {/* Form */}
+                <form onSubmit={handleContactSubmit} className="space-y-5">
+                  <div className="space-y-4">
+                    <div className="relative">
+                      <input
+                        type="text"
+                        name="nombre"
+                        value={formData.nombre}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-devsnap-secondary focus:border-devsnap-secondary transition-all duration-300 font-encode-sans placeholder:text-gray-400"
+                        placeholder="Tu nombre completo"
+                      />
+                    </div>
 
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2 font-encode-sans">
-                    WhatsApp
-                  </label>
-                  <input
-                    type="tel"
-                    name="whatsapp"
-                    value={formData.whatsapp}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-devsnap-secondary focus:border-transparent font-encode-sans"
-                    placeholder="+52 55 1234 5678"
-                  />
-                </div>
+                    <div className="relative">
+                      <input
+                        type="email"
+                        name="correo"
+                        value={formData.correo}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-devsnap-secondary focus:border-devsnap-secondary transition-all duration-300 font-encode-sans placeholder:text-gray-400"
+                        placeholder="tu@email.com"
+                      />
+                    </div>
 
-                <button
-                  type="submit"
-                  className="w-full flex items-center justify-center space-x-2 bg-gradient-to-r from-devsnap-secondary to-devsnap-success text-white py-3 px-6 rounded-lg font-medium hover:from-devsnap-secondary/90 hover:to-devsnap-success/90 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-encode-sans"
-                >
-                  <Send size={18} />
-                  <span>Enviar</span>
-                </button>
-              </form>
+                    <div className="relative">
+                      <input
+                        type="tel"
+                        name="whatsapp"
+                        value={formData.whatsapp}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-devsnap-secondary focus:border-devsnap-secondary transition-all duration-300 font-encode-sans placeholder:text-gray-400"
+                        placeholder="+52 55 1234 5678"
+                      />
+                    </div>
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="w-full flex items-center justify-center space-x-3 bg-gradient-to-r from-devsnap-secondary to-devsnap-success text-white py-4 px-6 rounded-xl font-semibold hover:from-devsnap-secondary/90 hover:to-devsnap-success/90 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-encode-sans group"
+                  >
+                    <Send size={20} className="group-hover:translate-x-1 transition-transform duration-300" />
+                    <span>Enviar Información</span>
+                  </button>
+                </form>
+
+                {/* Footer con garantías */}
+                <div className="mt-6 p-4 bg-gradient-to-r from-gray-50 to-gray-100 rounded-xl border border-gray-200">
+                  <div className="flex items-center justify-center space-x-6 text-xs text-gray-600">
+                    <span className="flex items-center">
+                      <div className="w-2 h-2 bg-green-500 rounded-full mr-1 animate-pulse"></div>
+                      Respuesta rápida
+                    </span>
+                    <span className="flex items-center">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full mr-1"></div>
+                      100% confidencial
+                    </span>
+                    <span className="flex items-center">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mr-1"></div>
+                      Sin compromiso
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         )}

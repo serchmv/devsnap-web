@@ -6,7 +6,7 @@ interface DnaSectionProps {
 
 const DnaSection: React.FC<DnaSectionProps> = ({ content }) => {
   return (
-    <section className="devsnap-section bg-devsnap-black">
+    <section id="nosotros" className="devsnap-section bg-devsnap-black">
       <div className="devsnap-container">
         <div className="grid lg:grid-cols-2 gap-12 items-center" >
           {/* Content */}

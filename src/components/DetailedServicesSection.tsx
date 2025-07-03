@@ -37,7 +37,7 @@ const DetailedServicesSection: React.FC<DetailedServicesSectionProps> = ({ conte
   };
 
   return (
-    <section className="devsnap-section bg-gradient-to-br from-gray-50 to-white">
+    <section id="especialidades" className="devsnap-section bg-gradient-to-br from-gray-50 to-white">
       <div className="devsnap-container">
         {/* Header */}
         <div className="text-center mb-16 fade-in-up">
@@ -54,118 +54,118 @@ const DetailedServicesSection: React.FC<DetailedServicesSectionProps> = ({ conte
 
         {/* Services Grid */}
         <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
-          {detailedServices.services.map((service: any, index: number) => (
+          {detailedServices.services.map((service: any, index: number) => {
+            const serviceImage = `/images/services/${index + 1}.jpg`;
+            
+            return (
             <div 
               key={index}
-              className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-devsnap-secondary/20 fade-in-up flex flex-col h-full"
+              className="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-500 border border-gray-100 hover:border-devsnap-secondary/20 fade-in-up flex flex-col h-full"
             >
-              {/* Image Placeholder */}
-              <div className="relative mb-6">
-                <div className="w-full h-48 bg-gray-100 rounded-xl flex items-center justify-center group-hover:bg-gray-50 transition-colors duration-300">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-gray-200 rounded-lg mx-auto mb-2 flex items-center justify-center">
-                      <span className="text-2xl text-gray-400">📷</span>
-                    </div>
-                    <p className="text-sm text-gray-400 font-encode-sans">Imagen del servicio</p>
-                  </div>
+              {/* Service Image with Blur Effect */}
+              <div className="relative mb-6 overflow-hidden rounded-lg">
+                <div className="w-full h-60 relative">
+                  <img
+                    src={serviceImage}
+                    alt={service.name}
+                    className="max-w-full max-h-full object-contain transition-all duration-500 group-hover:scale-105 filter blur-[0.5px] group-hover:blur-none"
+                    onError={(e) => {
+                      // Fallback si la imagen no carga
+                      const target = e.target as HTMLImageElement;
+                      target.style.display = 'none';
+                      const parent = target.parentElement;
+                      if (parent) {
+                        parent.innerHTML = `
+                          <div class="w-full h-full bg-gray-100 flex items-center justify-center">
+                            <div class="text-center">
+                              <div class="w-12 h-12 bg-gray-200 rounded-lg mx-auto mb-2 flex items-center justify-center">
+                                <span class="text-lg text-gray-400">📋</span>
+                              </div>
+                              <p class="text-xs text-gray-400">${service.name}</p>
+                            </div>
+                          </div>
+                        `;
+                      }
+                    }}
+                  />
+                  
+                  {/* Número del servicio minimalista */}
+                  
                 </div>
               </div>
 
               {/* Service Content */}
-              <div className="flex flex-col h-full">
-                <h3 className="text-xl font-bold text-devsnap-primary mb-4 font-encode-sans">
+              <div className="flex flex-col">
+                <h3 className="text-lg font-semibold text-devsnap-primary mb-3 font-encode-sans">
                   {service.name}
                 </h3>
                 
-                <p className="text-gray-600 mb-6 leading-relaxed font-encode-sans flex-grow">
+                <p className="text-sm text-gray-600 mb-6 leading-relaxed flex-grow">
                   {service.description}
                 </p>
 
-                {/* Ver más button */}
+                {/* Ver más button - Minimalista */}
                 <div className="mt-auto">
                   <button 
                     onClick={() => handleServiceClick(service.name)}
-                    className="group inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-devsnap-secondary to-devsnap-success hover:from-devsnap-secondary/90 hover:to-devsnap-success/90 text-white rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-encode-sans"
+                    className="group inline-flex items-center text-sm text-devsnap-primary hover:text-devsnap-secondary transition-colors duration-300 font-medium"
                   >
                     <span>Ver más</span>
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                    <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
                   </button>
                 </div>
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
 
-        {/* Technology Badges */}
-        <div className="mt-16 text-center fade-in-up">
+                       {/* Technology Badges */}
+        <div className="mt-16 text-center fade-in-up stagger-8">
           <h4 className="text-lg font-semibold text-devsnap-primary mb-6 uppercase tracking-wide font-encode-sans">
             Tecnologías y Plataformas Especializadas
           </h4>
           <div className="flex flex-wrap justify-center gap-6">
             {[
               { 
-                name: "Amazon Web Services", 
                 logo: "/images/tech-logos/aws-logo.png",
-                color: "from-orange-500 to-orange-600",
-                bgColor: "bg-orange-50 group-hover:bg-orange-100",
-                shortName: "AWS",
-                icon: "☁️"
+                color: "from-orange-400 to-orange-600",
+                shortName: "AWS"
               },
               { 
-                name: "Microsoft Azure", 
                 logo: "/images/tech-logos/azure-logo.png",
-                color: "from-blue-500 to-blue-600",
-                bgColor: "bg-blue-50 group-hover:bg-blue-100",
-                shortName: "Azure",
-                icon: "⚡"
+                color: "from-blue-400 to-blue-600",
+                shortName: "Azure"
               },
               { 
-                name: "React", 
                 logo: "/images/tech-logos/react-logo.jpg",
-                color: "from-cyan-500 to-cyan-600",
-                bgColor: "bg-cyan-50 group-hover:bg-cyan-100",
-                shortName: "React",
-                icon: "⚛️"
+                color: "from-cyan-400 to-cyan-600",
+                shortName: "React"
               },
               { 
-                name: "Python", 
                 logo: "/images/tech-logos/python-logo.png",
-                color: "from-yellow-500 to-green-600",
-                bgColor: "bg-yellow-50 group-hover:bg-yellow-100",
-                shortName: "Python",
-                icon: "🐍"
+                color: "from-green-400 to-green-600",
+                shortName: "Python"
               },
               { 
-                name: "TensorFlow", 
                 logo: "/images/tech-logos/tensorflow-logo.png",
-                color: "from-orange-500 to-red-600",
-                bgColor: "bg-orange-50 group-hover:bg-orange-100",
-                shortName: "TensorFlow",
-                icon: "🧠"
+                color: "from-purple-400 to-purple-600",
+                shortName: "TensorFlow"
               },
               { 
-                name: "Docker", 
                 logo: "/images/tech-logos/docker-logo.png",
-                color: "from-blue-600 to-blue-700",
-                bgColor: "bg-blue-50 group-hover:bg-blue-100",
-                shortName: "Docker",
-                icon: "🐳"
+                color: "from-blue-500 to-indigo-600",
+                shortName: "Docker"
               },
               { 
-                name: "Kubernetes", 
                 logo: "/images/tech-logos/kubernetes-logo.png",
-                color: "from-blue-600 to-indigo-700",
-                bgColor: "bg-blue-50 group-hover:bg-blue-100",
-                shortName: "K8s",
-                icon: "⎈"
+                color: "from-indigo-400 to-indigo-600",
+                shortName: "Kubernetes"
               },
               { 
-                name: "MongoDB", 
                 logo: "/images/tech-logos/mongodb-logo.png",
-                color: "from-green-600 to-green-700",
-                bgColor: "bg-green-50 group-hover:bg-green-100",
-                shortName: "MongoDB",
-                icon: "🍃"
+                color: "from-green-500 to-green-700",
+                shortName: "MongoDB"
               }
             ].map((tech, index) => (
               <div 
@@ -178,22 +178,20 @@ const DetailedServicesSection: React.FC<DetailedServicesSectionProps> = ({ conte
                 
                 {/* Logo Container */}
                 <div className="relative flex flex-col items-center space-y-3">
-                  <div className={`w-20 h-20 ${tech.bgColor} rounded-2xl flex items-center justify-center p-3 group-hover:shadow-lg transition-all duration-300 border-2 border-transparent group-hover:border-white`}>
-                    <div className={`w-12 h-12 bg-gradient-to-br ${tech.color} rounded-xl flex items-center justify-center shadow-sm group-hover:shadow-md transition-all duration-300`}>
-                      <img
-                        src={tech.logo}
-                        alt={tech.name}
-                        className="w-8 h-8 object-contain drop-shadow-sm"
-                        onError={(e) => {
-                          const target = e.target as HTMLImageElement;
-                          target.style.display = 'none';
-                          const parent = target.parentElement;
-                          if (parent) {
-                            parent.innerHTML = `<span class="text-white text-xl">${tech.icon}</span>`;
-                          }
-                        }}
-                      />
-                    </div>
+                  <div className="w-16 h-16 bg-gray-50 rounded-xl flex items-center justify-center p-2 group-hover:bg-white transition-colors duration-300">
+                    <img 
+                      src={tech.logo} 
+                      className="w-full h-full object-contain filter group-hover:drop-shadow-md transition-all duration-300"
+                      onError={(e) => {
+                        // Fallback si la imagen no carga
+                        const target = e.target as HTMLImageElement;
+                        target.style.display = 'none';
+                        const parent = target.parentElement;
+                        if (parent) {
+                          parent.innerHTML = `<span class="text-xl font-bold text-gray-600">${tech.shortName}</span>`;
+                        }
+                      }}
+                    />
                   </div>
                   
                   {/* Tech Name */}
@@ -202,7 +200,6 @@ const DetailedServicesSection: React.FC<DetailedServicesSectionProps> = ({ conte
                       {tech.shortName}
                     </p>
                     <p className="text-xs text-gray-500 group-hover:text-gray-700 transition-colors duration-300 font-encode-sans">
-                      {tech.name}
                     </p>
                   </div>
                 </div>

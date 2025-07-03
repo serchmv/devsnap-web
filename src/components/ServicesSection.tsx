@@ -7,10 +7,10 @@ interface ServicesSectionProps {
 
 const ServicesSection: React.FC<ServicesSectionProps> = ({ content }) => {
   return (
-    <section className="relative devsnap-section bg-[url('/images/fondosnap_1.svg')] bg-no-repeat bg-cover bg-center">
+    <section id="servicios" className="relative devsnap-section bg-[url('/images/fondosnap_1.svg')] bg-no-repeat bg-cover bg-center">
       {/* Overlay sutil para el SVG */}
       <div className="absolute inset-0 backdrop-blur-[3px] z-0"></div>      
-      
+       <div className="absolute inset-0 backdrop-blur-[3px] z-0"></div> 
       <div className="relative z-10">
         {/* Header */}
         <div className="text-center mb-16 fade-in-up">
