@@ -15,7 +15,7 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ content }) => {
         {/* Header */}
         <div className="text-center mb-16 fade-in-up">
           <p className="text-3xl md:text-3xl font-bold mb-4">
-            <span className="text-white font-encode-sans">"Soluciones tecnológicas</span>
+            <span className="text-black font-encode-sans">"Soluciones tecnológicas</span>
             <span className="text-black font-encode-sans"> avanzadas diseñadas para impulsar tu crecimiento"</span>
           </p>
         </div>
