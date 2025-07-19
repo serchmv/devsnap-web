@@ -8,7 +8,6 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ content }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
   const contactInfo = {
     telefono: '+525578470070',
@@ -113,17 +112,6 @@ const Header: React.FC<HeaderProps> = ({ content }) => {
               >
                 <Phone size={24} />
               </a>
-              
-              <button
-                onClick={() => setIsContactModalOpen(true)}
-                className={`px-5 py-2.5 rounded-full text-sm font-light transition-all duration-300 ${
-                  isScrolled
-                    ? 'bg-gray-900 text-white hover:bg-gray-800'
-                    : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'
-                }`}
-              >
-                Contacto
-              </button>
             </div>
           </div>
 
@@ -177,17 +165,6 @@ const Header: React.FC<HeaderProps> = ({ content }) => {
                     <Phone size={20} />
                     <span>Llamar</span>
                   </a>
-                  
-                  <button
-                    onClick={() => {
-                      setIsMobileMenuOpen(false);
-                      setIsContactModalOpen(true);
-                    }}
-                    className="flex items-center space-x-3 w-full py-2 text-gray-700 hover:text-purple-600"
-                  >
-                    <Mail size={20} />
-                    <span>Email</span>
-                  </button>
                 </div>
               </div>
             </div>
@@ -195,102 +172,24 @@ const Header: React.FC<HeaderProps> = ({ content }) => {
         </>
       )}
 
-      {/* Contact Modal */}
-      {isContactModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-md">
-          <div className="bg-gray-950 rounded-3xl p-8 max-w-md w-full shadow-2xl border border-gray-800">
-            {/* Header con logo */}
-            <div className="flex justify-between items-start mb-6">
-              <div>
-                <img 
-                  src="/images/DS2.png" 
-                  alt="DevSnap" 
-                  className="h-8 w-auto mb-4"
-                />
-                <h3 className="text-xl font-light text-white">Solicita tu Demo</h3>
-                <p className="text-sm text-gray-400 mt-2 font-light">
-                  Descubre cómo nuestras soluciones de automatización pueden transformar tu negocio. 
-                  Te enviaremos una demostración personalizada a tu correo.
-                </p>
-              </div>
-              <button
-                onClick={() => setIsContactModalOpen(false)}
-                className="p-1 hover:bg-gray-800 rounded-lg transition-colors"
-              >
-                <X size={20} className="text-gray-400" />
+    
+      
+      {/* WhatsApp Option Modal - Se muestra después del login */}
+      {false && ( // Cambiar a un estado como isWhatsAppModalOpen
+        <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 w-full max-w-sm">
+          <div className="bg-gray-950 rounded-2xl p-6 shadow-2xl border border-gray-800">
+            <h4 className="text-lg font-light text-white mb-4">¿También por WhatsApp?</h4>
+            <p className="text-sm text-gray-400 mb-6">
+              ¿Te gustaría recibir tu demo también por WhatsApp?
+            </p>
+            <div className="flex space-x-3">
+              <button className="flex-1 bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-colors">
+                Sí, también WhatsApp
+              </button>
+              <button className="flex-1 border border-gray-700 text-gray-300 py-2 rounded-lg hover:bg-gray-800 transition-colors">
+                Solo email
               </button>
             </div>
-            
-            <form onSubmit={async (e) => {
-              e.preventDefault();
-              const formData = new FormData(e.currentTarget);
-              const data = {
-                nombre: formData.get('nombre'),
-                email: formData.get('email'),
-                telefono: formData.get('telefono'),
-                timestamp: new Date().toISOString(),
-                source: 'website_header'
-              };
-              
-              try {
-                // Enviar a n8n webhook
-                const response = await fetch('https://automation.devsnap.com.mx/webhook/contact-form', {
-                  method: 'POST',
-                  headers: {
-                    'Content-Type': 'application/json',
-                  },
-                  body: JSON.stringify(data)
-                });
-                
-                if (response.ok) {
-                  // Mostrar mensaje de éxito
-                  setIsContactModalOpen(false);
-                  // Aquí podrías agregar una notificación de éxito
-                  alert('¡Gracias! Recibirás tu demo por correo pronto.');
-                }
-              } catch (error) {
-                console.error('Error:', error);
-                alert('Hubo un error. Por favor intenta de nuevo.');
-              }
-            }} className="space-y-4 mt-6">
-              <input
-                type="text"
-                name="nombre"
-                placeholder="Tu nombre"
-                required
-                className="w-full px-4 py-3 bg-gray-900 border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-gray-600 transition-colors font-light"
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="tu@email.com"
-                required
-                className="w-full px-4 py-3 bg-gray-900 border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-gray-600 transition-colors font-light"
-              />
-              <input
-                type="tel"
-                name="telefono"
-                placeholder="+52 55 1234 5678"
-                required
-                className="w-full px-4 py-3 bg-gray-900 border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-gray-600 transition-colors font-light"
-              />
-              
-              {/* Botón minimalista */}
-              <button
-                type="submit"
-                className="w-full group flex items-center justify-center space-x-3 py-3 text-white font-light hover:text-cyan-400 transition-all duration-300"
-              >
-                <span className="text-sm tracking-wider">SOLICITAR DEMO</span>
-                <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
-              </button>
-            </form>
-            
-            {/* Footer sutil */}
-            <p className="text-xs text-gray-500 text-center mt-6 font-light">
-              Al enviar tus datos aceptas recibir información sobre nuestras soluciones.
-            </p>
           </div>
         </div>
       )}

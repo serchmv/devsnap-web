@@ -211,7 +211,7 @@ const Hero: React.FC<HeroProps> = ({ content }) => {
         {/* Logo con animación */}
         <div className="flex items-center justify-center mb-8 fade-in-up">
           <img 
-            src="/images/logo2.png" 
+            src="/images/logo3.png" 
             alt="DevSnap Logo" 
             className="h-32 w-auto filter drop-shadow-lg animate-float"
           />
