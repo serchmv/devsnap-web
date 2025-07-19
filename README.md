@@ -19,27 +19,23 @@ DevSnap Consulting es una consultora especializada en:
 
 ### Frontend
 - **React 18.3** - Framework JavaScript moderno
-- **TypeScript 5.6** - Tipado estático para mayor robustez
-- **Vite 6.0** - Build tool optimizado y rápido
-- **TailwindCSS 3.4** - Framework CSS utility-first
-- **Shadcn/ui** - Componentes UI con Radix UI
+- **TypeScript** - Tipado estático para mayor robustez
+- **Vite** - Build tool optimizado y rápido
+- **TailwindCSS** - Framework CSS utility-first
+- **Framer Motion** - Animaciones fluidas
 - **Lucide React** - Iconografía moderna
-- **React Router DOM** - Navegación SPA
-- **React Hook Form** - Manejo de formularios
-- **Zod** - Validación de esquemas
 
 ### Herramientas de Desarrollo
-- **ESLint 9.15** - Linting y calidad de código
-- **TypeScript ESLint** - Linting específico para TypeScript
-- **PostCSS** - Procesamiento de CSS
-- **Autoprefixer** - Prefijos CSS automáticos
-- **PNPM** - Gestor de paquetes eficiente
+- **ESLint** - Linting y calidad de código
+- **Prettier** - Formateo automático
+- **Husky** - Git hooks pre-commit
+- **Vercel/Netlify** - Deployment automático
 
 ## 🚀 Instalación y Configuración
 
 ### Prerrequisitos
 - **Node.js** 18+ (recomendado LTS)
-- **PNPM** (recomendado) o **npm**
+- **npm** o **yarn**
 - **Git**
 - **Visual Studio Code** (recomendado)
 
@@ -54,11 +50,11 @@ cd devsnap-web
 
 ### 2. Instalar Dependencias
 ```bash
-# Con pnpm (recomendado)
-pnpm install
-
-# O con npm
+# Con npm
 npm install
+
+# O con yarn
+yarn install
 ```
 
 ### 3. Configurar Variables de Entorno
@@ -73,10 +69,10 @@ code .env
 ### 4. Levantar Servidor de Desarrollo
 ```bash
 # Iniciar en modo desarrollo
-pnpm run dev
-
-# O con npm
 npm run dev
+
+# O con yarn
+yarn dev
 ```
 
 ### 5. Abrir en Visual Studio Code
@@ -92,23 +88,26 @@ code .
 
 ```bash
 # Desarrollo
-pnpm run dev          # Servidor de desarrollo (http://localhost:5173)
-npm run dev
+npm run dev          # Servidor de desarrollo (http://localhost:5173)
+yarn dev
 
 # Build para producción
-pnpm run build        # Compilar para producción (tsc -b && vite build)
-npm run build
+npm run build        # Compilar para producción
+yarn build
 
 # Preview build
-pnpm run preview      # Vista previa del build
-npm run preview
+npm run preview      # Vista previa del build
+yarn preview
 
-# Linting
-pnpm run lint         # Ejecutar ESLint
-npm run lint
+# Linting y formato
+npm run lint         # Ejecutar ESLint
+npm run format       # Formatear con Prettier
+yarn lint
+yarn format
 
-# Instalación y desarrollo en un comando
-pnpm run install-and-dev  # Instalar dependencias y ejecutar desarrollo
+# Type checking
+npm run type-check   # Verificar tipos TypeScript
+yarn type-check
 ```
 
 ## 🏗️ Estructura del Proyecto
@@ -117,28 +116,26 @@ pnpm run install-and-dev  # Instalar dependencias y ejecutar desarrollo
 devsnap-web/
 ├── 📁 public/
 │   ├── favicon.ico
-│   ├── data/
-│   │   └── devsnap-content.json
+│   ├── logo.svg
 │   └── images/
 ├── 📁 src/
 │   ├── 📁 components/
-│   │   ├── ui/              # Componentes shadcn/ui
-│   │   ├── common/          # Componentes reutilizables (OptimizedImage, ClientLogo)
-│   │   ├── specialties/     # Páginas de especialidades
-│   │   ├── widgets/         # Widgets (WhatsApp)
-│   │   ├── *Section.tsx     # Secciones principales (Hero, Services, etc.)
-│   │   ├── Header.tsx
-│   │   ├── Footer.tsx
-│   │   └── ErrorBoundary.tsx
+│   │   ├── ui/              # Componentes reutilizables
+│   │   ├── layout/          # Layout components (Header, Footer)
+│   │   └── sections/        # Secciones de páginas
+│   ├── 📁 pages/
+│   │   ├── Home.tsx
+│   │   ├── Services.tsx
+│   │   ├── Portfolio.tsx
+│   │   └── Contact.tsx
 │   ├── 📁 hooks/            # Custom React hooks
-│   ├── 📁 lib/              # Utilidades (utils.ts)
+│   ├── 📁 utils/            # Utilidades y helpers
+│   ├── 📁 types/            # Definiciones TypeScript
+│   ├── 📁 assets/           # Imágenes, iconos, etc.
 │   ├── App.tsx
 │   ├── main.tsx
-│   ├── index.css
-│   └── vite-env.d.ts
-├── 📁 dist/                 # Build de producción
+│   └── index.css
 ├── package.json
-├── pnpm-lock.yaml
 ├── tsconfig.json
 ├── vite.config.ts
 ├── tailwind.config.js
@@ -248,7 +245,7 @@ Instalar las siguientes extensiones para una mejor experiencia:
 ```bash
 git clone https://github.com/serchmv/devsnap-web.git
 cd devsnap-web
-pnpm install
+npm install
 code .
 ```
 
@@ -256,7 +253,7 @@ code .
 
 3. **Iniciar desarrollo:**
 ```bash
-pnpm run dev
+npm run dev
 ```
 
 4. **Abrir navegador:** http://localhost:5173
