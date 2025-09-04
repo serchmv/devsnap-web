@@ -168,7 +168,7 @@ Mis datos:
       {/* Contenido principal */}
       <div className="relative z-10 min-h-screen overflow-y-auto">
         {/* Botón volver */}
-        <div className="pt-8 pb-6">
+        <div className="pb-6">
           <div className="devsnap-container">
             <button
               onClick={handleBackToHome}
@@ -181,7 +181,7 @@ Mis datos:
         </div>
 
         {/* Hero Section */}
-        <section className="py-12">
+        <section>
           <div className="devsnap-container">
             <div className="text-center mb-12">
               {/* Badge */}
@@ -191,17 +191,18 @@ Mis datos:
               </div>
 
               {/* Título principal */}
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 font-encode-sans">
+              <h1 className="text-5xl md:text-7xl font-thin text-white mb-4 leading-tight tracking-tight">
                 <span className="text-white">Transforma tu</span>
-                <span className="block bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                  Aula con IA
+                
+                <span className="block font-normal bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent opacity-0 animate-fade-in-up animation-delay-400">
+                Aula con IA
                 </span>
               </h1>
               
               <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed font-encode-sans">
-                El primer curso profesional <strong className="text-emerald-400">100% gratuito</strong> en México 
-                para que los docentes de primaria dominen herramientas de inteligencia artificial 
-                y revolucionen su forma de enseñar.
+              Capacitación profesional <strong className="text-emerald-400">100% gratuita </strong> 
+              dirigida a nuestra comunidad educativa de Nicolás Romero. 
+              Programa innovador que capacita a docentes de nivel básico en herramientas de inteligencia artificial para transformar sus aulas y elevar la calidad educativa.
               </p>
 
               {/* Estadísticas */}

@@ -17,7 +17,8 @@
       { "label": "INICIO", "href": "#" },
       { "label": "NOSOTROS", "href": "#nosotros" },
       { "label": "SERVICIOS", "href": "#servicios" },
-      { "label": "ESPECIALIDADES", "href": "#especialidades" }
+      { "label": "ESPECIALIDADES", "href": "#especialidades" },
+      { "label": "IA EDUCATIVA", "href": "#curso-ia" }
     ],
     "contact": {
       "whatsapp": "+525578470070",
@@ -28,11 +29,102 @@
     "title": "Soluciones integrales para impulsar tu transformación digital",
     "backgroundImage": "/images/hero-cityscape.jpg"
   },
+  "course": {
+    "title": "Transforma tu Aula con IA",
+    "subtitle": "Curso profesional 100% gratuito para docentes de primaria",
+    "description": "Aprende a crear materiales didácticos en minutos usando herramientas de inteligencia artificial completamente gratuitas.",
+    "features": [
+      {
+        "icon": "⚡",
+        "title": "Eficiencia x10",
+        "description": "Crea materiales en minutos, no horas"
+      },
+      {
+        "icon": "🎨", 
+        "title": "Contenido Único",
+        "description": "Materiales personalizados para cada grupo"
+      },
+      {
+        "icon": "📱",
+        "title": "Solo tu Celular",
+        "description": "No necesitas computadora ni software especial"
+      },
+      {
+        "icon": "🔍",
+        "title": "Análisis Inteligente",
+        "description": "Convierte documentos en recursos educativos"
+      }
+    ],
+    "stats": {
+      "duration": "6 horas",
+      "cost": "100% Gratuito",
+      "spots": "20 cupos únicos",
+      "requirement": "Solo tu celular"
+    },
+    "program": [
+      {
+        "session": 1,
+        "title": "Fundamentos",
+        "duration": "2 horas",
+        "description": "Conoce Gemini y crea tu primer material didáctico",
+        "color": "emerald"
+      },
+      {
+        "session": 2,
+        "title": "Herramientas Avanzadas", 
+        "duration": "2 horas",
+        "description": "NotebookLM y creación de imágenes profesionales",
+        "color": "cyan"
+      },
+      {
+        "session": 3,
+        "title": "Aplicación Práctica",
+        "duration": "2 horas", 
+        "description": "Casos por materia y uso ético de la IA",
+        "color": "blue"
+      }
+    ],
+    "instructor": {
+      "name": "Ing. Sergio Morales",
+      "title": "Fundador de DevSnap",
+      "experience": "9 años de experiencia en TI",
+      "description": "Ingeniero en Computación especializado en democratizar herramientas tecnológicas para educadores mexicanos.",
+      "credentials": [
+        "Ingeniero en Computación",
+        "9 años de experiencia en TI", 
+        "Fundador de DevSnap",
+        "Especialista en innovación educativa"
+      ]
+    },
+    "benefits": [
+      "Certificado de participación",
+      "Biblioteca de prompts probados", 
+      "Videos tutoriales exclusivos",
+      "Grupo de WhatsApp para soporte",
+      "Plantillas para todas las materias",
+      "Metodología replicable"
+    ],
+    "requirements": [
+      "Celular Android o iOS",
+      "Conexión a internet",
+      "Cuenta Gmail (gratuita)",
+      "Ganas de aprender"
+    ],
+    "testimonial": {
+      "quote": "En 30 minutos creo lo que antes me tomaba 3 horas. Mis alumnos están más motivados porque los materiales son únicos y creativos.",
+      "author": "Profra. María Elena",
+      "position": "3er grado"
+    },
+    "socialProof": {
+      "nonprofit": true,
+      "mission": "Democratizar la educación de calidad en México",
+      "commitment": "Proyecto social sin fines de lucro de DevSnap"
+    }
+  },
   "dna": {
     "title": "Nuestro ADN como Solutions Makers",
     "image": "/images/dna-professional.jpg",
     "features": [
-      
       "Transformación de legacies",
       "IA y analítica",
       "BPA",
@@ -50,7 +142,6 @@
         "image": "/images/server-room.jpg",
         "icon": "💻",
         "services": [
-        
           "Transformación de legacies",
           "IA y analítica",
           "BPA",
@@ -267,7 +358,8 @@
     "links": [
       { "label": "Políticas de Privacidad", "href": "#" },
       { "label": "Contáctanos", "href": "#contacto" },
-      { "label": "Carreras", "href": "#carreras" }
+      { "label": "Carreras", "href": "#carreras" },
+      { "label": "IA Educativa", "href": "#curso-ia" }
     ],
     "socialMedia": [
       { "platform": "Facebook", "url": "#" },
