@@ -239,13 +239,12 @@ const Hero: React.FC<HeroProps> = ({ content }) => {
           {/* CTA Button - Minimalista como header */}
           <div className="opacity-0 animate-fade-in-up animation-delay-800">
  {/* Badge especial para curso - Botón completo */}
+
+{/* Badge especial para curso - Botón actualizado */}
 <div className="mb-6">
   <button 
     onClick={() => {
-      const element = document.getElementById('curso-ia');
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+      window.location.hash = 'curso-ia'; // 🆕 Navega a la página dedicada
     }}
     className="group cursor-pointer transition-all duration-300 hover:scale-105"
   >

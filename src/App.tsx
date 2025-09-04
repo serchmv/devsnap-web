@@ -16,6 +16,9 @@ import ContentMarketingPage from './components/specialties/ContentMarketingPage'
 import APIMicroservicesPage from './components/specialties/APIMicroservicesPage';
 import CiberseguridadPage from './components/specialties/CiberseguridadPage';
 
+// 🆕 Course Page
+import CourseEducativaPage from './components/CourseEducativaPage';
+
 function App() {
   const [content, setContent] = useState<any>(null);
   const [loading, setLoading] = useState(true);
@@ -53,6 +56,8 @@ function App() {
         setCurrentPage('apis');
       } else if (hash === 'ciberseguridad') {
         setCurrentPage('security');
+      } else if (hash === 'curso-ia') { // 🆕 Nueva ruta para el curso
+        setCurrentPage('curso-ia');
       } else {
         setCurrentPage('home');
       }
@@ -111,13 +116,15 @@ function App() {
         return <APIMicroservicesPage content={content} />;
       case 'security':
         return <CiberseguridadPage content={content} />;
+      case 'curso-ia': // 🆕 Nueva página del curso
+        return <CourseEducativaPage content={content} />;
       default:
         return null;
     }
   };
 
   return (
-    <div className="App">
+    <div className={currentPage === 'curso-ia' ? 'App pixel-grid-animated min-h-screen' : 'App'}>
       <Header content={content} />
       <main>
         {currentPage === 'home' ? (
@@ -135,7 +142,8 @@ function App() {
           </>
         )}
       </main>
-      <Footer content={content} />
+      {/* Footer solo visible cuando NO es la página del curso */}
+      {currentPage !== 'curso-ia' && <Footer content={content} />}
       
       {/* WhatsApp Widget - Visible on all pages */}
       <WhatsAppWidgetDevSnap 
