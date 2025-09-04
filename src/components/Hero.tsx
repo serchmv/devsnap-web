@@ -247,7 +247,7 @@ const Hero: React.FC<HeroProps> = ({ content }) => {
               }}
               className="group inline-flex items-center space-x-3 text-white/90 hover:text-white transition-all duration-300"
             >
-              <span className="text-sm font-light tracking-wider">EXPLORAR SOLUCIONES</span>
+              <span className="text-sm font-light tracking-wider">EXPLORAR NUESTRO CURSO PRESENCIAL PARA DOCENTES GRATUITO</span>
               <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
