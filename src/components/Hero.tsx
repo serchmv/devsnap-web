@@ -238,21 +238,49 @@ const Hero: React.FC<HeroProps> = ({ content }) => {
           
           {/* CTA Button - Minimalista como header */}
           <div className="opacity-0 animate-fade-in-up animation-delay-800">
-            <button 
-              onClick={() => {
-                const element = document.getElementById('servicios');
-                if (element) {
-                  element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-              }}
-              className="group inline-flex items-center space-x-3 text-white/90 hover:text-white transition-all duration-300"
-            >
-              <span className="text-sm font-light tracking-wider">EXPLORAR NUESTRO CURSO PRESENCIAL PARA DOCENTES GRATUITO</span>
-              <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
-            </button>
-          </div>
+ {/* Badge especial para curso - Botón completo */}
+<div className="mb-6">
+  <button 
+    onClick={() => {
+      const element = document.getElementById('curso-ia');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }}
+    className="group cursor-pointer transition-all duration-300 hover:scale-105"
+  >
+    <div className="inline-flex items-center bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border border-emerald-400/30 rounded-full px-6 py-2 backdrop-blur-sm hover:from-emerald-500/30 hover:to-cyan-500/30 hover:border-emerald-400/50 transition-all duration-300">
+      <span className="w-2 h-2 bg-emerald-400 rounded-full mr-3 animate-pulse"></span>
+      <span className="text-emerald-300 text-sm font-medium mr-2">NUEVO: Curso IA para Docentes - 100% Gratuito</span>
+      <svg 
+        className="w-4 h-4 text-emerald-300 transform group-hover:translate-x-1 transition-transform duration-300" 
+        fill="none" 
+        stroke="currentColor" 
+        viewBox="0 0 24 24"
+      >
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+      </svg>
+    </div>
+  </button>
+</div>
+  {/* Botones */}
+  <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
+    
+    <button 
+      onClick={() => {
+        const element = document.getElementById('servicios');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }}className="group inline-flex items-center space-x-3 text-white/90 hover:text-white transition-all duration-300">
+      <span className="text-sm font-light tracking-wider">EXPLORAR SERVICIOS</span>
+      <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+      </svg>
+    </button>
+  </div>
+</div>
+
         </div>
       </div>
       

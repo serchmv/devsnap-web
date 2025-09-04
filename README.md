@@ -114,32 +114,128 @@ yarn type-check
 
 ```
 devsnap-web/
-├── 📁 public/
-│   ├── favicon.ico
-│   ├── logo.svg
-│   └── images/
-├── 📁 src/
-│   ├── 📁 components/
-│   │   ├── ui/              # Componentes reutilizables
-│   │   ├── layout/          # Layout components (Header, Footer)
-│   │   └── sections/        # Secciones de páginas
-│   ├── 📁 pages/
-│   │   ├── Home.tsx
-│   │   ├── Services.tsx
-│   │   ├── Portfolio.tsx
-│   │   └── Contact.tsx
-│   ├── 📁 hooks/            # Custom React hooks
-│   ├── 📁 utils/            # Utilidades y helpers
-│   ├── 📁 types/            # Definiciones TypeScript
-│   ├── 📁 assets/           # Imágenes, iconos, etc.
-│   ├── App.tsx
-│   ├── main.tsx
-│   └── index.css
-├── package.json
-├── tsconfig.json
-├── vite.config.ts
-├── tailwind.config.js
-└── README.md
+├── 📁 public/                      # Archivos públicos estáticos
+│   ├── 📁 data/                    # Archivos JSON de datos
+│   │   └── devsnap-content.json    # Contenido principal del sitio
+│   ├── 📁 images/                  # Imágenes del sitio
+│   │   ├── 📁 services/            # Imágenes de servicios
+│   │   └── 📁 tech-logos/          # Logos de tecnologías
+│   ├── 📁 videos/                  # Videos del sitio
+│   └── use.txt                     # Archivo de configuración
+├── 📁 src/                         # Código fuente principal
+│   ├── 📁 components/              # Componentes React
+│   │   ├── 📁 common/              # Componentes comunes reutilizables
+│   │   │   ├── ClientLogo.tsx      # Logo de clientes
+│   │   │   ├── OptimizedImage.tsx  # Imagen optimizada
+│   │   │   ├── OptimizedVideo.tsx  # Video optimizado
+│   │   │   └── TechLogo.tsx        # Logo de tecnologías
+│   │   ├── 📁 specialties/         # Páginas de especialidades
+│   │   │   ├── APIMicroservicesPage.tsx     # API y Microservicios
+│   │   │   ├── AutomatizacionRPAPage.tsx    # Automatización RPA
+│   │   │   ├── CiberseguridadPage.tsx       # Ciberseguridad
+│   │   │   ├── CloudMigrationPage.tsx       # Migración a la nube
+│   │   │   ├── ContentMarketingPage.tsx     # Marketing de contenidos
+│   │   │   └── IAMachineLearningPage.tsx    # IA y Machine Learning
+│   │   ├── 📁 ui/                  # Componentes UI de shadcn/ui
+│   │   │   ├── accordion.tsx       # Acordeón expandible
+│   │   │   ├── alert-dialog.tsx    # Diálogo de alerta
+│   │   │   ├── alert.tsx           # Alertas
+│   │   │   ├── aspect-ratio.tsx    # Ratio de aspecto
+│   │   │   ├── avatar.tsx          # Avatar de usuario
+│   │   │   ├── badge.tsx           # Badges/etiquetas
+│   │   │   ├── breadcrumb.tsx      # Breadcrumb navegación
+│   │   │   ├── button.tsx          # Botones
+│   │   │   ├── calendar.tsx        # Calendario
+│   │   │   ├── card.tsx            # Tarjetas
+│   │   │   ├── carousel.tsx        # Carrusel
+│   │   │   ├── chart.tsx           # Gráficos
+│   │   │   ├── checkbox.tsx        # Checkbox
+│   │   │   ├── collapsible.tsx     # Colapsable
+│   │   │   ├── command.tsx         # Comando/búsqueda
+│   │   │   ├── context-menu.tsx    # Menú contextual
+│   │   │   ├── dialog.tsx          # Diálogos modales
+│   │   │   ├── drawer.tsx          # Drawer lateral
+│   │   │   ├── dropdown-menu.tsx   # Menú desplegable
+│   │   │   ├── form.tsx            # Formularios
+│   │   │   ├── hover-card.tsx      # Tarjeta hover
+│   │   │   ├── input-otp.tsx       # Input OTP
+│   │   │   ├── input.tsx           # Campos de entrada
+│   │   │   ├── label.tsx           # Etiquetas
+│   │   │   ├── menubar.tsx         # Barra de menú
+│   │   │   ├── navigation-menu.tsx # Menú de navegación
+│   │   │   ├── pagination.tsx      # Paginación
+│   │   │   ├── popover.tsx         # Popover
+│   │   │   ├── progress.tsx        # Barra de progreso
+│   │   │   ├── radio-group.tsx     # Radio buttons
+│   │   │   ├── resizable.tsx       # Redimensionable
+│   │   │   ├── scroll-area.tsx     # Área con scroll
+│   │   │   ├── select.tsx          # Select/dropdown
+│   │   │   ├── separator.tsx       # Separador
+│   │   │   ├── sheet.tsx           # Sheet/panel
+│   │   │   ├── sidebar.tsx         # Barra lateral
+│   │   │   ├── skeleton.tsx        # Skeleton loader
+│   │   │   ├── slider.tsx          # Slider/deslizador
+│   │   │   ├── sonner.tsx          # Notificaciones toast
+│   │   │   ├── switch.tsx          # Switch toggle
+│   │   │   ├── table.tsx           # Tablas
+│   │   │   ├── tabs.tsx            # Pestañas
+│   │   │   ├── textarea.tsx        # Área de texto
+│   │   │   ├── toast.tsx           # Toast notifications
+│   │   │   ├── toaster.tsx         # Contenedor de toasts
+│   │   │   ├── toggle-group.tsx    # Grupo de toggles
+│   │   │   ├── toggle.tsx          # Toggle button
+│   │   │   └── tooltip.tsx         # Tooltips
+│   │   ├── 📁 widgets/             # Widgets especiales
+│   │   │   └── WhatsAppWidgetDevSnap.tsx # Widget de WhatsApp
+│   │   ├── AboutUsSection.tsx      # Sección Nosotros
+│   │   ├── ClientsSection.tsx      # Sección Clientes
+│   │   ├── DetailedServicesSection.tsx # Sección Servicios Detallados
+│   │   ├── DifferentiatorsSection.tsx  # Sección Diferenciadores
+│   │   ├── DnaSection.tsx          # Sección ADN
+│   │   ├── ErrorBoundary.tsx       # Manejo de errores
+│   │   ├── Footer.tsx              # Pie de página
+│   │   ├── Header.tsx              # Encabezado
+│   │   ├── Hero.tsx                # Hero/Banner principal
+│   │   ├── JoinUsSection.tsx       # Sección Únete
+│   │   ├── ModernizationSection.tsx # Sección Modernización
+│   │   ├── NewsletterSection.tsx   # Sección Newsletter
+│   │   ├── ServicesSection.tsx     # Sección Servicios
+│   │   └── TechCentersSection.tsx  # Sección Centros Tech
+│   ├── 📁 hooks/                   # Custom React hooks
+│   │   ├── use-mobile.tsx          # Hook para detectar móvil
+│   │   └── use-toast.ts            # Hook para toasts
+│   ├── 📁 lib/                     # Librerías y utilidades
+│   │   └── utils.ts                # Funciones de utilidad
+│   ├── App.tsx                     # Componente principal
+│   ├── main.tsx                    # Punto de entrada
+│   ├── index.css                   # Estilos globales
+│   └── vite-env.d.ts              # Tipos de Vite
+├── 📁 scripts/                     # Scripts de automatización
+│   ├── generate-optimized-assets.js # Optimización de assets
+│   └── optimize-assets.md          # Documentación de optimización
+├── 📁 dist/                        # Build de producción
+│   ├── 📁 assets/                  # Assets compilados
+│   └── 📁 data/                    # Datos de producción
+├── 📁 .github/                     # Configuración GitHub
+│   └── copilot-instructions.md     # Instrucciones Copilot
+├── 📁 .clinerules/                 # Reglas CLI
+├── 📁 .cursor/                     # Configuración Cursor
+│   └── 📁 rules/                   # Reglas de Cursor
+├── 📁 .kilocode/                   # Configuración Kilocode
+│   └── 📁 rules/                   # Reglas de Kilocode
+├── 📁 test/                        # Tests
+├── components.json                 # Configuración de componentes UI
+├── eslint.config.js               # Configuración ESLint
+├── index.html                     # HTML principal
+├── package.json                   # Dependencias del proyecto
+├── pnpm-lock.yaml                # Lock file de pnpm
+├── postcss.config.js             # Configuración PostCSS
+├── tailwind.config.js            # Configuración Tailwind CSS
+├── tsconfig.app.json             # Configuración TypeScript app
+├── tsconfig.json                 # Configuración TypeScript principal
+├── tsconfig.node.json            # Configuración TypeScript node
+├── vite.config.ts                # Configuración Vite
+└── README.md                     # Este archivo
 ```
 
 ## 🔧 Configuración Visual Studio Code
