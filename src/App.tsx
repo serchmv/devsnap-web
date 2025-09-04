@@ -124,7 +124,10 @@ function App() {
   };
 
   return (
-    <div className={currentPage === 'curso-ia' ? 'App pixel-grid-animated min-h-screen' : 'App'}>
+    <div className="App">
+      {currentPage === 'curso-ia' && (
+        <div className="fixed inset-0 -z-10 bg-slate-900" />
+      )}
       <Header content={content} />
       <main>
         {currentPage === 'home' ? (

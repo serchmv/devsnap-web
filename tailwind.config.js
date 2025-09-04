@@ -7,6 +7,12 @@ module.exports = {
 		'./app/**/*.{ts,tsx}',
 		'./src/**/*.{ts,tsx}',
 	],
+	safelist: [
+		// Gradients dinámicos usados en CourseEducativaPage
+		{ pattern: /from-(emerald|cyan|blue|purple|pink|rose|indigo|teal|green)-(400|500|600)/ },
+		{ pattern: /to-(emerald|cyan|blue|purple|pink|rose|indigo|teal|green)-(400|500|600)/ },
+		{ pattern: /text-(emerald|cyan|blue|purple|pink|rose|indigo|teal|green)-(300|400|500|600)/ },
+	],
 	theme: {
 		container: {
 			center: true,

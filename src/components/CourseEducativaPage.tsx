@@ -32,7 +32,7 @@ const CourseEducativaPage: React.FC<CourseEducativaPageProps> = ({ content }) =>
 
     // Configuración de píxeles
     const pixels: any[] = [];
-    const numberOfPixels = 80;
+    const numberOfPixels = window.innerWidth < 768 ? 50 : 90;
 
     class Pixel {
       x: number;
@@ -44,14 +44,18 @@ const CourseEducativaPage: React.FC<CourseEducativaPageProps> = ({ content }) =>
       color: string;
       pulseSpeed: number;
       pulseOffset: number;
+      baseOpacity: number;
+      opacityAmplitude: number;
 
       constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
         this.size = Math.random() * 4 + 2;
-        this.speedX = (Math.random() - 0.5) * 0.6;
-        this.speedY = (Math.random() - 0.5) * 0.6;
-        this.opacity = Math.random() * 0.6 + 0.4;
+        this.speedX = (Math.random() - 0.5) * 0.3;
+        this.speedY = (Math.random() - 0.5) * 0.3;
+        this.baseOpacity = Math.random() * 0.2 + 0.3; // 0.3 - 0.5
+        this.opacityAmplitude = Math.random() * 0.1 + 0.15; // 0.15 - 0.25
+        this.opacity = this.baseOpacity;
         
         const colors = ['#10b981', '#06b6d4', '#3b82f6', '#8b5cf6', '#ec4899'];
         this.color = colors[Math.floor(Math.random() * colors.length)];
@@ -71,7 +75,7 @@ const CourseEducativaPage: React.FC<CourseEducativaPageProps> = ({ content }) =>
           this.speedY = -this.speedY;
         }
 
-        this.opacity = 0.4 + 0.4 * Math.sin(time * this.pulseSpeed + this.pulseOffset);
+        this.opacity = this.baseOpacity + this.opacityAmplitude * Math.sin(time * this.pulseSpeed + this.pulseOffset);
       }
 
       draw() {
@@ -111,7 +115,7 @@ const CourseEducativaPage: React.FC<CourseEducativaPageProps> = ({ content }) =>
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       
       for (let i = 0; i < pixels.length; i++) {
-        pixels[i].update(time * 0.001);
+        pixels[i].update(time * 0.0006);
         pixels[i].draw();
       }
       
@@ -158,7 +162,7 @@ Mis datos:
       {/* Canvas de píxeles animados */}
       <canvas 
         ref={canvasRef}
-        className="fixed inset-0 z-0"
+        className="fixed inset-0 z-0 pointer-events-none"
       />
 
       {/* Contenido principal */}

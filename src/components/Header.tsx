@@ -51,11 +51,12 @@ const Header: React.FC<HeaderProps> = ({ content }) => {
     }
   };
 
+  const isCoursePage = typeof window !== 'undefined' && window.location.hash === '#curso-ia';
+  const useLightTheme = !isScrolled || isCoursePage;
+
   return (
     <header className={`fixed w-full top-0 z-50 transition-all duration-500 ${
-      isScrolled 
-        ? 'bg-white/90 backdrop-blur-md shadow-sm' 
-        : 'bg-transparent'
+      isCoursePage ? 'bg-transparent' : (isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm' : 'bg-transparent')
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <nav className="flex items-center justify-between h-16">
@@ -77,9 +78,9 @@ const Header: React.FC<HeaderProps> = ({ content }) => {
                   key={item.label}
                   onClick={() => handleNavigation(item.href)}
                   className={`text-sm font-light tracking-wide transition-colors duration-300 ${
-                    isScrolled 
-                      ? 'text-gray-800 hover:text-blue-600' 
-                      : 'text-white hover:text-blue-400'
+                    useLightTheme 
+                      ? 'text-white hover:text-blue-400' 
+                      : 'text-gray-800 hover:text-blue-600'
                   }`}
                 >
                   {item.label.toUpperCase()}
@@ -92,9 +93,9 @@ const Header: React.FC<HeaderProps> = ({ content }) => {
               <button
                 onClick={handleWhatsApp}
                 className={`p-2.5 rounded-lg transition-all duration-300 ${
-                  isScrolled
-                    ? 'text-gray-700 hover:text-green-600 hover:bg-green-50'
-                    : 'text-white hover:text-green-400'
+                  useLightTheme
+                    ? 'text-white hover:text-green-400'
+                    : 'text-gray-700 hover:text-green-600 hover:bg-green-50'
                 }`}
                 title="WhatsApp"
               >
@@ -104,9 +105,9 @@ const Header: React.FC<HeaderProps> = ({ content }) => {
               <a
                 href={`tel:${contactInfo.telefono}`}
                 className={`p-2.5 rounded-lg transition-all duration-300 ${
-                  isScrolled
-                    ? 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
-                    : 'text-white hover:text-blue-400'
+                  useLightTheme
+                    ? 'text-white hover:text-blue-400'
+                    : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
                 }`}
                 title="Llamar"
               >
@@ -118,7 +119,7 @@ const Header: React.FC<HeaderProps> = ({ content }) => {
           {/* Mobile Menu Button */}
           <button
             className={`md:hidden p-2 rounded-lg transition-colors duration-300 ${
-              isScrolled ? 'text-gray-800' : 'text-white'
+              useLightTheme ? 'text-white' : 'text-gray-800'
             }`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
