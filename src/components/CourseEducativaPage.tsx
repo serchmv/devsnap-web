@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { ArrowLeft, Users, Clock, Smartphone, BookOpen, Lightbulb, Heart, CheckCircle, Star, Award, MessageCircle, ArrowRight, Download, Play, Video } from 'lucide-react';
+import { ArrowLeft, Users, Clock, Smartphone, Heart, CheckCircle, Star, Award, MessageCircle, ArrowRight, BookOpen } from 'lucide-react';
 
 interface CourseEducativaPageProps {
   content: any;
@@ -201,27 +201,27 @@ Mis datos:
               
               <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed font-encode-sans">
               Capacitación profesional <strong className="text-emerald-400">100% gratuita </strong> 
-              dirigida a nuestra comunidad educativa de Nicolás Romero. 
-              Programa innovador que capacita a docentes de nivel básico en herramientas de inteligencia artificial para transformar sus aulas y elevar la calidad educativa.
+              dirigida a escuelas de nivel básico y media superior de Nicolás Romero. 
+              Ofreciendo un programa innovador en el uso estratégico de herramientas de inteligencia artificial para transformar sus aulas y elevar significativamente la calidad educativa.
               </p>
 
               {/* Estadísticas */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto mb-8">
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-emerald-400 font-encode-sans">6</div>
-                  <div className="text-sm text-gray-400 font-encode-sans">Horas Prácticas</div>
+                  <div className="text-lg font-bold text-emerald-400 font-encode-sans">Prácticas</div>
+                 
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-cyan-400 font-encode-sans">$0</div>
-                  <div className="text-sm text-gray-400 font-encode-sans">Totalmente Gratis</div>
+                  <div className="text-lg font-bold text-cyan-400 font-encode-sans">Totalmente Gratuito</div>
+                 
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-blue-400 font-encode-sans">20</div>
-                  <div className="text-sm text-gray-400 font-encode-sans">Lugares Exclusivos</div>
+                  <div className="text-lg font-bold text-blue-400 font-encode-sans">Presencial en tu escuela</div>
+                 
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-purple-400 font-encode-sans">📱</div>
-                  <div className="text-sm text-gray-400 font-encode-sans">Solo tu Celular</div>
+                  <div className="text-lg font-bold text-purple-400 font-encode-sans">Solo con Celular</div>
+                 
                 </div>
               </div>
 
@@ -229,15 +229,14 @@ Mis datos:
               <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
                 <a
                   href="#inscripcion"
-                  className="bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl flex items-center space-x-2 font-encode-sans"
+                  className="inline-flex items-center justify-center bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-400/30 rounded-xl px-8 py-4 backdrop-blur-sm text-blue-300 font-bold transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:border-blue-400/50 hover:from-blue-500/30 hover:to-cyan-500/30 font-encode-sans"
                 >
-                  <span>🚀 Inscribirme Ahora</span>
-                  <ArrowRight className="w-5 h-5" />
+                  <span>Inscribirme Ahora</span>
                 </a>
                 
                 <a
                   href="#programa"
-                  className="border-2 border-white/20 hover:border-white/40 text-white hover:bg-white/10 font-semibold py-4 px-8 rounded-full transition-all duration-300 backdrop-blur-sm flex items-center space-x-2 font-encode-sans"
+                  className="inline-flex items-center justify-center bg-gradient-to-r from-black/20 to-black/30 border border-white/40 rounded-xl px-8 py-4 backdrop-blur-sm text-white/80 font-bold transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:border-white/60 hover:from-black/30 hover:to-black/40 space-x-2 font-encode-sans"
                 >
                   <BookOpen className="w-5 h-5" />
                   <span>Ver Programa</span>
