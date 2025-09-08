@@ -289,6 +289,7 @@
   animation: scale-up 0.3s ease-out forwards;
 }
 
+
 /* Mobile menu gradient - forced visibility */
 [data-mobile-menu] {
   background: linear-gradient(135deg, #2C3E50 0%, #6C63FF 25%, #20B2AA 50%, #E91E63 75%, #2C3E50 100%) !important;

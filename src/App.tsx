@@ -6,7 +6,7 @@ import ServicesSection from './components/ServicesSection';
 import DetailedServicesSection from './components/DetailedServicesSection';
 import TechCentersSection from './components/TechCentersSection';
 import Footer from './components/Footer';
-import WhatsAppWidgetDevSnap from './components/widgets/WhatsAppWidgetDevSnap';
+//import WhatsAppWidgetDevSnap from './components/widgets/WhatsAppWidgetDevSnap';
 
 // Specialty Pages
 import IAMachineLearningPage from './components/specialties/IAMachineLearningPage';
@@ -149,11 +149,11 @@ function App() {
       {currentPage !== 'curso-ia' && <Footer content={content} />}
       
       {/* WhatsApp Widget - Visible on all pages */}
-      <WhatsAppWidgetDevSnap 
+      {/*<WhatsAppWidgetDevSnap 
         position="bottom-right"
         showAfterSeconds={5}
         customMessage="¿Listo para digitalizar tu empresa? Nuestros especialistas están en línea para ayudarte ahora"
-      />
+      />*/}
     </div>
   );
 }
